@@ -9,7 +9,7 @@ Identify functionalities needed
     make a priority list for building out functionalities
 
 1. Develop a homepage/nav/landing page
-    - Setup a mobile-first responsive layout us the figma rough drafts to define different needed sections
+    - Setup a mobile-first responsive layout use the figma rough drafts to define the different necessary sections
 2. Develop an experience section
 
 
