@@ -10,6 +10,8 @@ Identify functionalities needed
 
 1. Develop a homepage/nav/landing page
     - Setup a mobile-first responsive layout use the figma rough drafts to define the different necessary sections
+        - Separate styles rules into different files
+        - Create media queries & breakpoints for each platform
 2. Develop an experience section
 
 
