@@ -25,43 +25,44 @@ body {
     height: auto;
 }
 
-
 .content {
+    border-left: 1px solid white;
+
     
     &__a {
         background-color: $bg-1;
     }
-
+    
     &__b {
         background-color: $bg-2;
     }
-
-    padding: 1.25rem 2.8125rem;
+    
+    padding: 1.25rem 2rem;
 }
 
 
 //MOBILE
 h1 {
     color: $accent-1;
-
+    
     font-family: $font-title;
-    font-size: $fs-xlarge;
+    font-size: $fs-large;
     font-weight: 500;
     letter-spacing: calc($fs-xlarge * 0.1);
-
+    
     margin-bottom: 1.25rem;
-
+    
     border-bottom: calc($fs-xlarge * 0.075) solid $accent-1;
 }
 
 h2 {
     color: $accent-3;
-
+    
     font-size: $fs-medium;
     font-weight: 700;
     letter-spacing: calc($fs-medium * 0.125);
     line-height: 1.5;
-
+    
     margin-bottom: 1rem;
 }
 
