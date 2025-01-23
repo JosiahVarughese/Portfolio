@@ -31,10 +31,16 @@ body {
     
     &__a {
         background-color: $bg-1;
+        h2 {
+            color: $accent-3;
+        }
     }
     
     &__b {
         background-color: $bg-2;
+        h2 {
+            color: $text-default;
+        }
     }
     
     padding: 1.25rem 2rem;
@@ -56,8 +62,6 @@ h1 {
 }
 
 h2 {
-    color: $accent-3;
-    
     font-size: $fs-medium;
     font-weight: 700;
     letter-spacing: calc($fs-medium * 0.125);
@@ -91,6 +95,18 @@ button {
     margin-bottom: 2.5rem;
 }
 
+.social {
+    margin-bottom: 2rem;
+
+    .icon {
+        font-size: $fs-large;
+    }
+
+    :not(:last-child) {
+        margin-right: 1rem;
+    }
+}
+
 //TABLET
 @media (min-width: $breakpoint-md) {
     h1 {
@@ -113,10 +129,17 @@ button {
         font-size: $fs-default;
         letter-spacing: calc($fs-default * 0.3);
     }
+
+    .social {
+    
+        .icon {
+            font-size: $fs-large;
+        }
+    }
 }
 
 
 //DESKTOP
 @media (min-width: $breakpoint-lg) {
-
+    
 }
