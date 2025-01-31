@@ -46,6 +46,11 @@ body {
     padding: 1.25rem 2rem;
 }
 
+a:hover, a:hover span {
+    color: $accent-2;
+    transition: 150ms ease-in-out;
+}
+
 
 //MOBILE
 h1 {
@@ -54,7 +59,7 @@ h1 {
     font-family: $font-title;
     font-size: $fs-large;
     font-weight: 500;
-    letter-spacing: calc($fs-xlarge * 0.1);
+    letter-spacing: $ls-large;
     
     margin-bottom: 1.25rem;
     
@@ -64,7 +69,7 @@ h1 {
 h2 {
     font-size: $fs-medium;
     font-weight: 700;
-    letter-spacing: calc($fs-medium * 0.125);
+    letter-spacing: $ls-medium;
     line-height: 1.5;
     
     margin-bottom: 1rem;
@@ -73,26 +78,44 @@ h2 {
 p {
     font-size: $fs-default;
     font-weight: 400;
-    letter-spacing: calc($fs-default * 0.2);
-    line-height: 1.5;
+    letter-spacing: $ls-default;
+    line-height: 1.75;
 
     margin-bottom: 2rem;
 }
 
 button {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-evenly;
+
     color: $accent-2;
     background-color: transparent;
 
     text-transform: uppercase;
     font-size: $fs-small;
     font-weight: 500;
-    letter-spacing: calc($fs-small * 0.3);
+    letter-spacing: $ls-small;
     
     border: 1px solid $accent-2;
     border-radius: 2rem;
     padding: 1.125rem 2rem;
 
     margin-bottom: 2.5rem;
+
+    > span {
+        color: inherit;
+        font-size: inherit;
+    }
+
+    > .icon {
+        font-size: 125%;
+    }
+
+    :not(:last-child) {
+        margin-right: calc($fs-small * 0.3);
+    }
 }
 
 .social {
@@ -111,23 +134,23 @@ button {
 @media (min-width: $breakpoint-md) {
     h1 {
         font-size: $fs-xxlarge;
-        letter-spacing: calc($fs-xxlarge * 0.1);
+        letter-spacing: $ls-xxlarge;
         border-bottom: calc($fs-xxlarge * 0.05) solid $accent-1;
     }
     
     h2 {
         font-size: $fs-large;
-        letter-spacing: calc($fs-large * 0.125);
+        letter-spacing: $ls-large;
     }
     
     p {
         font-size: $fs-medium;
-        letter-spacing: calc($fs-medium * 0.2);
+        letter-spacing: $ls-medium;
     }
     
     button {
         font-size: $fs-default;
-        letter-spacing: calc($fs-default * 0.3);
+        letter-spacing: $ls-default;
     }
 
     .social {

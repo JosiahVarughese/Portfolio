@@ -3,10 +3,17 @@ $font-title: Raleway, Sans-serif;
 
 $fs-small: 0.875rem;
 $fs-default: 1.125rem;
-$fs-medium: 1.5rem;
+$fs-medium: 1.2rem;
 $fs-large: 2.5rem;
 $fs-xlarge: 3.5rem;
 $fs-xxlarge: 6rem;
+
+$ls-small: calc($fs-small * 0.3);
+$ls-default: calc($fs-default * 0.2);
+$ls-medium: calc($fs-medium * 0.125);
+$ls-large: calc($fs-large * 0.1);
+$ls-xlarge: calc($fs-xlarge * 0.1);
+$ls-xxlarge: calc($fs-xxlarge * 0.1);
 
 $breakpoint-md: 37.5em;
 $breakpoint-lg: 62.5em;
