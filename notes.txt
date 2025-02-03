@@ -20,6 +20,7 @@ TODO
 
 issues
 - Image scaling, pixel perfect images, image breakpoints
+- Style attributes in the HTML
 - 
 
 CONTENT
