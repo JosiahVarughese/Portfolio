@@ -1,25 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>
-            //This function makes sure the difference between our local url: "localhost:whatever/index.html"
-            // and the GitHub pages url: "https://josiahvarughese.github.io/Portfolio/index.html"
-            // doesn't break our website.
-            function initialize() {
-                if (window.location.href.indexOf("Portfolio") > -1) {
-                    const pageDefault = document.createElement("meta");
-                    pageDefault.setAttribute("http-equiv", "refresh");
-                    pageDefault.setAttribute("content", "0");
-                    pageDefault.setAttribute("URL", "/Portfolio/");
-                    document.head.appendChild(pageDefault);
-                } else {
-                    console.log("Running locally!")
-                }
-            }
-
-            initialize();
-        </script>
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
