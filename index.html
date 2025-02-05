@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script>
+            //This function makes sure the difference between our local url: "localhost:whatever/index.html"
+            // and the GitHub pages url: "https://josiahvarughese.github.io/Portfolio/index.html"
+            // doesn't break our website.
+            function initialize() {
+                if (window.location.href.indexOf("Portfolio") > -1) {
+                    const pageDefault = document.createElement("meta");
+                    pageDefault.setAttribute("http-equiv", "refresh");
+                    pageDefault.setAttribute("content", "0");
+                    pageDefault.setAttribute("URL", "/Portfolio/");
+                    document.head.appendChild(pageDefault);
+                } else {
+                    console.log("Running locally!")
+                }
+            }
+
+            initialize();
+        </script>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         
-        <link rel="stylesheet" href="/Portfolio/dist/style.css" />
+        <link id="style" rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap">
         
-        <!-- <script defer src="/index.js"></script> -->
+        <script defer src="/index.js"></script>
         <script src="https://kit.fontawesome.com/e1ab631cdb.js" crossorigin="anonymous"></script>
     </head>
     <body>
