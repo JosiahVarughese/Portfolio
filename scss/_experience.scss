@@ -1,0 +1,24 @@
+.experience {
+
+    //MOBILE
+    &__horizontal {
+            display: flex;
+            flex-direction: column;
+    }
+
+    //TABLET
+    @media (min-width: $breakpoint-md) {
+        &__horizontal {
+            flex-direction: row;
+
+            > :not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
+    
+    //DESKTOP
+    @media (min-width: $breakpoint-lg) {
+    
+    }
+}

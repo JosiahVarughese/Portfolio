@@ -2,7 +2,7 @@
     position: relative;
 
     width: 100%;
-    height: 50vh;
+    height: 30vh;
 
     &__header {
         position: absolute;
@@ -13,6 +13,8 @@
         translate: -50%;
 
         width: calc(100% - 2.8125rem);
+
+        margin-left: auto;
     }
 
     &__overlay {
@@ -40,8 +42,8 @@
     &__img_portrait {
         position: absolute;
         
-        width: 12rem;
-        height: 12rem;
+        width: 10rem;
+        height: 10rem;
 
         bottom: 7%;
         right: 0;
@@ -60,6 +62,8 @@
     //TABLET
     @media (min-width: $breakpoint-md) {
 
+        //height: 50vh;
+
         &__overlay {
             height: 60%;
         }
@@ -75,10 +79,10 @@
         }
     }
 
-    
-
     //DESKTOP
     @media (min-width: $breakpoint-lg) {
+
+        height: 50vh;
 
         &__header {
             br {

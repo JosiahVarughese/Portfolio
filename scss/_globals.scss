@@ -31,28 +31,56 @@ body {
     
     &__a {
         background-color: $bg-1;
-        h2 {
-            color: $accent-3;
-        }
     }
     
     &__b {
         background-color: $bg-2;
-        h2 {
-            color: $text-default;
-        }
     }
     
     padding: 1.25rem 2rem;
 }
 
+.header {
+    line-height: 1.5;
+
+    margin-bottom: 1rem;
+
+    .subheading {
+        font-size: $fs-medium;
+    }
+
+    .details {
+        color: $text-muted;
+        font-size: $fs-default;
+    }
+
+    .details-small {
+        color: $text-muted;
+        font-size: $fs-x-small;
+        letter-spacing: $ls-x-small;
+    }
+}
+
+.footer {
+    background-color: $bg-3;
+}
+
+.indent {
+    padding: 1rem 0 0 2rem;
+    border-left: 1px solid $bg-3;
+}
+
+//MOBILE
+a {
+    color: $text-muted;
+    font-weight: bold;
+}
+
 a:hover, a:hover span {
-    color: $accent-2;
+    color: $text-default;
     transition: 150ms ease-in-out;
 }
 
-
-//MOBILE
 h1 {
     color: $accent-1;
     
@@ -63,25 +91,64 @@ h1 {
     
     margin-bottom: 1.25rem;
     
-    border-bottom: calc($fs-xlarge * 0.075) solid $accent-1;
+    border-bottom: calc($fs-x-large * 0.075) solid $accent-1;
 }
 
 h2 {
+    color: $accent-3;
+
     font-size: $fs-medium;
     font-weight: 700;
     letter-spacing: $ls-medium;
     line-height: 1.5;
     
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: $fs-medium;
+    font-weight: 700;
+    letter-spacing: $ls-medium;
+    line-height: 1.5;
+
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: $fs-default;
+    font-weight: 700;
+    letter-spacing: $ls-default;
+    line-height: 1.5;
+
+    margin-bottom: 0.25rem;
+}
+
+strong {
+    font-size: $fs-default;
+    font-weight: 600;
+}
+
+h3 a, h4 a, strong a {
+    color: $text-default;
+}
+
+small {
+    font-size: $fs-small;
 }
 
 p {
+    white-space: pre-line;
+
     font-size: $fs-default;
     font-weight: 400;
     letter-spacing: $ls-default;
     line-height: 1.75;
 
     margin-bottom: 2rem;
+}
+
+p.list {
+    font-size: $fs-small;
 }
 
 button {
@@ -132,20 +199,26 @@ button {
 
 //TABLET
 @media (min-width: $breakpoint-md) {
+
     h1 {
-        font-size: $fs-xxlarge;
-        letter-spacing: $ls-xxlarge;
-        border-bottom: calc($fs-xxlarge * 0.05) solid $accent-1;
+        font-size: $fs-x-large;
+        letter-spacing: $ls-x-large;
+        border-bottom: calc($fs-x-large * 0.05) solid $accent-1;
     }
     
     h2 {
         font-size: $fs-large;
         letter-spacing: $ls-large;
     }
-    
-    p {
+
+    h3 {
         font-size: $fs-medium;
         letter-spacing: $ls-medium;
+    }
+    
+    p {
+        font-size: $fs-default;
+        letter-spacing: $ls-default;
     }
     
     button {

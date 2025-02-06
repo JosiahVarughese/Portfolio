@@ -1,32 +1,29 @@
 TODO
-• Test the dynamic Github url fixes to make sure your current hrefs will work will work.
-You may need to replace the "/path" pathing with "./path" pathing.
 
-• Develop a homepage/nav/landing page
-    - Setup a mobile-first responsive layout use the figma rough drafts to define the different necessary sections
-        - Separate styles rules into different files
-        - Create media queries & breakpoints for each platform
-
-• Develop an experience section
-    - Fill out bio
-    - Create a resume catered specifically to the portfolio
-    - Add a resume/pdf link to the portfolio
-    - Consider whether or not adding some sort of HTML experience section is necessary or helpful
+• Create an About Me/Bio section
+    - Create a resume(s) catered specifically to the portfolio & add a resume/pdf link to the portfolio
     - 
 
-• Identify different sections + potential scaling issues
-    plan the page layout
-    setup breakpoints for different platforms
+• Fix font sizes, make them more consistent and intuitive to work with.
+ maybe consider using more of a bootstrap styling system for the text
 
-Known issues to correct
-• Image scaling, pixel perfect images, image breakpoints.
-Once you have professional photos for your website, make sure to create different sizes for different the platforms
- so the doesn't take unnecessarily long to load.
+• Develop a homepage/nav/landing page
+    - Setup a mobile-first responsive layout
+    - Create media queries & breakpoints for each platform
+
+• Identify different sections + potential scaling issues
+
+
+KNOWN ISSUES
 
 • Style attributes in the HTML.
 You did a bunch of ghetto styling in the index page, you should replace this with proper html/css styling.
 
 • The "Technologies I've Used" and "Things I've Tackled.." sections need to change from flex direction row to column based on the breakpoints.
+
+• Image scaling, pixel perfect images, image breakpoints.
+Once you have professional photos for your website, make sure to create different sizes for different the platforms
+ so the doesn't take unnecessarily long to load.
 
 • 
 
