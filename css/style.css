@@ -1,6 +1,4 @@
 * {
-  color: rgb(235, 235, 235);
-  font-family: Raleway, Sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -25,36 +23,17 @@ body {
   height: auto;
 }
 
-.content {
-  border-left: 1px solid white;
-  padding: 1.25rem 2rem;
+section {
+  padding: 2rem;
 }
-.content__a {
+section.content-a {
   background-color: rgb(18, 18, 18);
 }
-.content__b {
+section.content-b {
   background-color: rgb(23, 23, 23);
 }
-
-.header {
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
-.header .subheading {
-  font-size: 1.25rem;
-}
-.header .details {
-  color: rgb(158, 158, 158);
-  font-size: 1.125rem;
-}
-.header .details-small {
-  color: rgb(158, 158, 158);
-  font-size: 0.875rem;
-  letter-spacing: 0.109375rem;
-}
-
-.footer {
-  background-color: rgb(41, 41, 41);
+section > article:not(:last-child) {
+  margin-bottom: 4rem;
 }
 
 .indent {
@@ -62,143 +41,145 @@ body {
   border-left: 1px solid rgb(41, 41, 41);
 }
 
-a {
-  color: rgb(158, 158, 158);
-  font-weight: bold;
+.header {
+  margin-bottom: 0.5rem;
 }
 
-a:hover, a:hover span {
-  color: rgb(235, 235, 235);
-  transition: 150ms ease-in-out;
+.footer {
+  background-color: rgb(41, 41, 41);
 }
 
 h1 {
-  color: rgb(173, 173, 248);
-  font-family: Raleway, Sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: 0.15rem;
   margin-bottom: 1.25rem;
-  border-bottom: 0.2625rem solid rgb(173, 173, 248);
 }
 
 h2 {
-  color: rgb(202, 161, 84);
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.15625rem;
-  line-height: 1.5;
   margin-bottom: 2rem;
 }
 
 h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.15625rem;
-  line-height: 1.5;
   margin-bottom: 0.5rem;
 }
 
 h4 {
-  font-size: 1.125rem;
-  font-weight: 700;
-  letter-spacing: 0.225rem;
-  line-height: 1.5;
   margin-bottom: 0.25rem;
 }
 
-strong {
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
-h3 a, h4 a, strong a {
-  color: rgb(235, 235, 235);
-}
-
-small {
-  font-size: 1rem;
-}
-
 p {
-  white-space: pre-line;
-  font-size: 1.125rem;
-  font-weight: 400;
-  letter-spacing: 0.225rem;
-  line-height: 1.75;
-  margin-bottom: 2rem;
-}
-
-p.list {
-  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 button {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: rgb(255, 100, 165);
   background-color: transparent;
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.3rem;
   border: 1px solid rgb(255, 100, 165);
   border-radius: 2rem;
   padding: 1.125rem 2rem;
   margin-bottom: 2.5rem;
 }
-button > span {
-  color: inherit;
-  font-size: inherit;
-}
 button > .icon {
   font-size: 125%;
 }
 button :not(:last-child) {
-  margin-right: 0.3rem;
+  margin-right: 0.25rem;
 }
 
 .social {
   margin-bottom: 2rem;
 }
-.social .icon {
-  font-size: 1.5rem;
-}
 .social :not(:last-child) {
   margin-right: 1rem;
 }
 
-@media (min-width: 37.5em) {
-  h1 {
-    font-size: 3.5rem;
-    letter-spacing: 0.35rem;
-    border-bottom: 0.175rem solid rgb(173, 173, 248);
-  }
-  h2 {
-    font-size: 1.5rem;
-    letter-spacing: 0.15rem;
-  }
-  h3 {
-    font-size: 1.25rem;
-    letter-spacing: 0.15625rem;
-  }
-  p {
-    font-size: 1.125rem;
-    letter-spacing: 0.225rem;
-  }
-  button {
-    font-size: 1.125rem;
-    letter-spacing: 0.225rem;
-  }
-  .social .icon {
-    font-size: 1.5rem;
-  }
+h1, h2, h3, h4,
+div, span, p,
+ol, ul, li strong,
+small, i {
+  color: rgb(235, 235, 235);
+  font-family: Raleway, Sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.175em;
 }
+
+a, a:visited {
+  color: rgb(190, 190, 190);
+  font-weight: 700;
+  letter-spacing: 0.175em;
+}
+
+p {
+  white-space: pre-line;
+  line-height: 2;
+}
+
+.text-style-title {
+  color: rgb(173, 173, 248);
+  font-family: Raleway, Sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  line-height: 1.1;
+  border-bottom: 0.075em solid rgb(173, 173, 248);
+}
+
+.text-style-heading-1 {
+  color: rgb(202, 161, 84);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.text-style-heading-2 {
+  font-weight: 700;
+  letter-spacing: 0.175em;
+}
+
+.text-style-subtle {
+  color: rgb(190, 190, 190);
+  letter-spacing: 0.175em;
+}
+
+.text-style-muted {
+  color: rgb(180, 180, 180);
+  letter-spacing: 0.1em;
+  line-height: 1.75;
+}
+
+.text-style-button {
+  color: rgb(255, 100, 165);
+  text-transform: uppercase;
+}
+
+.fs-x-small {
+  font-size: 0.875rem;
+}
+
+.fs-small {
+  font-size: 1rem;
+}
+
+.fs-med {
+  font-size: 1.25rem;
+}
+
+.fs-large {
+  font-size: 1.5rem;
+}
+
+.fs-x-large {
+  font-size: 2.5rem;
+}
+
+.fs-xx-large {
+  font-size: 4rem;
+}
+
 .hero {
   position: relative;
   width: 100%;
   height: 30vh;
+  margin-bottom: 1rem;
 }
 .hero__header {
   position: absolute;

@@ -1,26 +1,26 @@
 $font-default: Raleway, Sans-serif;
 $font-title: Raleway, Sans-serif;
 
-$fs-x-small: 0.875rem;
-$fs-small: 1rem;
-$fs-default: 1.125rem;
-$fs-medium: 1.25rem;
-$fs-large: 1.5rem;
-$fs-x-large: 3.5rem;
+$fs-14px: 0.875rem;
+$fs-16px: 1rem;
+$fs-20px: 1.25rem;
+$fs-24px: 1.5rem;
+$fs-32px: 2rem;
+$fs-40px: 2.5rem;
+$fs-64px: 4rem;
 
-$ls-x-small: calc($fs-x-small * 0.125);
-$ls-small: calc($fs-small * 0.3);
-$ls-default: calc($fs-default * 0.2);
-$ls-medium: calc($fs-medium * 0.125);
-$ls-large: calc($fs-large * 0.1);
-$ls-x-large: calc($fs-x-large * 0.1);
+$ls-small: 0.1em;
+$ls-med: 0.175em;
+$ls-large: 0.2em;
+$ls-x-large: 0.25em;
 
 $breakpoint-md: 37.5em;
 $breakpoint-lg: 62.5em;
 
 //DARK
-$text-default: rgb(235, 235, 235);
-$text-muted: rgb(158, 158, 158);
+$fg-1: rgb(235, 235, 235);
+$fg-2: rgb(190, 190, 190);
+$fg-3: rgb(180, 180, 180);
 
 $accent-1: rgb(173, 173, 248);
 $accent-2: rgb(255, 100, 165);

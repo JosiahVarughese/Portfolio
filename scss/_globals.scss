@@ -1,6 +1,5 @@
+//SETUP
 * {
-    color: $text-default;
-    font-family: $font-default;
     margin: 0;
     padding: 0;
 }
@@ -18,6 +17,7 @@ body {
     background-color: $bg-1;
 }
 
+//SPACING
 .container {
     display: flex;
     flex-direction: column;
@@ -25,44 +25,20 @@ body {
     height: auto;
 }
 
-.content {
-    border-left: 1px solid white;
+section {
+    padding: 2rem;
 
-    
-    &__a {
+    &.content-a {
         background-color: $bg-1;
     }
     
-    &__b {
+    &.content-b {
         background-color: $bg-2;
     }
     
-    padding: 1.25rem 2rem;
-}
-
-.header {
-    line-height: 1.5;
-
-    margin-bottom: 1rem;
-
-    .subheading {
-        font-size: $fs-medium;
+    > article:not(:last-child) {
+        margin-bottom: 4rem;
     }
-
-    .details {
-        color: $text-muted;
-        font-size: $fs-default;
-    }
-
-    .details-small {
-        color: $text-muted;
-        font-size: $fs-x-small;
-        letter-spacing: $ls-x-small;
-    }
-}
-
-.footer {
-    background-color: $bg-3;
 }
 
 .indent {
@@ -70,118 +46,54 @@ body {
     border-left: 1px solid $bg-3;
 }
 
+.header {
+    margin-bottom: 0.5rem;
+}
+
+.footer {
+    background-color: $bg-3;
+}
+
 //MOBILE
-a {
-    color: $text-muted;
-    font-weight: bold;
-}
-
-a:hover, a:hover span {
-    color: $text-default;
-    transition: 150ms ease-in-out;
-}
-
-h1 {
-    color: $accent-1;
-    
-    font-family: $font-title;
-    font-size: $fs-large;
-    font-weight: 500;
-    letter-spacing: $ls-large;
-    
+h1 {    
     margin-bottom: 1.25rem;
-    
-    border-bottom: calc($fs-x-large * 0.075) solid $accent-1;
 }
 
 h2 {
-    color: $accent-3;
-
-    font-size: $fs-medium;
-    font-weight: 700;
-    letter-spacing: $ls-medium;
-    line-height: 1.5;
-    
     margin-bottom: 2rem;
 }
 
 h3 {
-    font-size: $fs-medium;
-    font-weight: 700;
-    letter-spacing: $ls-medium;
-    line-height: 1.5;
-
     margin-bottom: 0.5rem;
 }
 
 h4 {
-    font-size: $fs-default;
-    font-weight: 700;
-    letter-spacing: $ls-default;
-    line-height: 1.5;
-
     margin-bottom: 0.25rem;
 }
 
-strong {
-    font-size: $fs-default;
-    font-weight: 600;
-}
-
-h3 a, h4 a, strong a {
-    color: $text-default;
-}
-
-small {
-    font-size: $fs-small;
-}
-
-p {
-    white-space: pre-line;
-
-    font-size: $fs-default;
-    font-weight: 400;
-    letter-spacing: $ls-default;
-    line-height: 1.75;
-
-    margin-bottom: 2rem;
-}
-
-p.list {
-    font-size: $fs-small;
+p { 
+    margin-bottom: 0.5rem;
 }
 
 button {
     display: flex;
-
     align-items: center;
     justify-content: space-evenly;
 
-    color: $accent-2;
     background-color: transparent;
-
-    text-transform: uppercase;
-    font-size: $fs-small;
-    font-weight: 500;
-    letter-spacing: $ls-small;
     
     border: 1px solid $accent-2;
     border-radius: 2rem;
+
     padding: 1.125rem 2rem;
-
     margin-bottom: 2.5rem;
-
-    > span {
-        color: inherit;
-        font-size: inherit;
-    }
 
     > .icon {
         font-size: 125%;
     }
 
     :not(:last-child) {
-        margin-right: calc($fs-small * 0.3);
+        margin-right: 0.25rem;
     }
 }
 
@@ -189,7 +101,7 @@ button {
     margin-bottom: 2rem;
 
     .icon {
-        font-size: $fs-large;
+
     }
 
     :not(:last-child) {
@@ -200,38 +112,6 @@ button {
 //TABLET
 @media (min-width: $breakpoint-md) {
 
-    h1 {
-        font-size: $fs-x-large;
-        letter-spacing: $ls-x-large;
-        border-bottom: calc($fs-x-large * 0.05) solid $accent-1;
-    }
-    
-    h2 {
-        font-size: $fs-large;
-        letter-spacing: $ls-large;
-    }
-
-    h3 {
-        font-size: $fs-medium;
-        letter-spacing: $ls-medium;
-    }
-    
-    p {
-        font-size: $fs-default;
-        letter-spacing: $ls-default;
-    }
-    
-    button {
-        font-size: $fs-default;
-        letter-spacing: $ls-default;
-    }
-
-    .social {
-    
-        .icon {
-            font-size: $fs-large;
-        }
-    }
 }
 
 

@@ -1,0 +1,94 @@
+h1, h2, h3, h4,
+div, span, p,
+ol, ul, li
+strong, small, i {
+    color: $fg-1;
+    font-family: $font-default;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: $ls-med;
+}
+
+a, a:visited {
+    color: $fg-2;
+    font-weight: 700;
+    letter-spacing: $ls-med;
+}
+
+p {
+    white-space: pre-line;
+
+    line-height: 2;
+}
+
+.text-style-title {
+    color: $accent-1;
+    font-family: $font-title;
+    font-weight: 500;
+    letter-spacing: $ls-x-large;
+    line-height: 1.1;
+
+    border-bottom: 0.075em solid $accent-1;
+}
+
+.text-style-heading-1 {
+    color: $accent-3;
+    font-weight: 700;
+    letter-spacing: $ls-large;
+}
+
+.text-style-heading-2 {
+    font-weight: 700;
+    letter-spacing: $ls-med;
+}
+
+.text-style-subtle {
+    color: $fg-2;
+    letter-spacing: $ls-med;
+}
+
+.text-style-muted {
+    color: $fg-3;
+    letter-spacing: $ls-small;
+    line-height: 1.75;
+}
+
+.text-style-button {
+    color: $accent-2;
+    text-transform: uppercase;
+}
+
+//MOBILE
+.fs-x-small {
+    font-size: $fs-14px;
+}
+
+.fs-small {
+    font-size: $fs-16px;
+}
+
+.fs-med {
+    font-size: $fs-20px;
+}
+
+.fs-large {
+    font-size: $fs-24px;
+}
+
+.fs-x-large {
+    font-size: $fs-40px;
+}
+
+.fs-xx-large {
+    font-size: $fs-64px;
+}
+
+//TABLET
+@media (min-width: $breakpoint-md) {
+
+}
+
+//DESKTOP
+@media (min-width: $breakpoint-lg) {
+
+}
