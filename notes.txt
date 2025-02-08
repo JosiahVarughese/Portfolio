@@ -1,5 +1,9 @@
 TODO
 
+• Change the general layout padding and margin for the different breakpoints
+
+• The page is far to wordy, try to make the writing more concise
+
 • Create an About Me/Bio section
     - Create a resume(s) catered specifically to the portfolio & add a resume/pdf link to the portfolio
     - 
@@ -25,7 +29,7 @@ You did a bunch of ghetto styling in the index page, you should replace this wit
 Once you have professional photos for your website, make sure to create different sizes for different the platforms
  so the doesn't take unnecessarily long to load.
 
-• 
+• There may be an odd number of elements in index.html, a missing tag or something
 
 
 CONTENT

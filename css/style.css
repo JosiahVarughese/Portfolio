@@ -16,28 +16,29 @@ body {
   background-color: rgb(18, 18, 18);
 }
 
-.container {
+.wrapper {
   display: flex;
   flex-direction: column;
   justify-content: end;
   height: auto;
 }
 
-section {
-  padding: 2rem;
-}
-section.content-a {
+.content > :nth-of-type(odd) {
   background-color: rgb(18, 18, 18);
 }
-section.content-b {
+.content > :nth-of-type(even) {
   background-color: rgb(23, 23, 23);
 }
-section > article:not(:last-child) {
-  margin-bottom: 4rem;
+
+section {
+  padding: 1rem;
+}
+section article:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 .indent {
-  padding: 1rem 0 0 2rem;
+  padding: 1rem 0 0 1rem;
   border-left: 1px solid rgb(41, 41, 41);
 }
 
@@ -47,10 +48,6 @@ section > article:not(:last-child) {
 
 .footer {
   background-color: rgb(41, 41, 41);
-}
-
-h1 {
-  margin-bottom: 1.25rem;
 }
 
 h2 {
@@ -89,10 +86,31 @@ button :not(:last-child) {
 .social {
   margin-bottom: 2rem;
 }
-.social :not(:last-child) {
+.social__icons :not(:last-child) {
   margin-right: 1rem;
 }
-
+@media (min-width: 37.5em) {
+  section {
+    padding: 2rem;
+  }
+  section article:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .indent {
+    padding: 1rem 0 0 2rem;
+  }
+}
+@media (min-width: 62.5em) {
+  section {
+    padding: 2rem;
+  }
+  section article:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+  .indent {
+    padding: 1rem 0 0 2rem;
+  }
+}
 h1, h2, h3, h4,
 div, span, p,
 ol, ul, li strong,
@@ -104,8 +122,12 @@ small, i {
   letter-spacing: 0.175em;
 }
 
-a, a:visited {
-  color: rgb(190, 190, 190);
+h1, h2, h3, h4 {
+  line-height: 1;
+}
+
+a, a:visited, a > span {
+  color: rgb(235, 235, 235);
   font-weight: 700;
   letter-spacing: 0.175em;
 }
@@ -152,34 +174,54 @@ p {
 }
 
 .fs-x-small {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .fs-small {
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
 .fs-med {
-  font-size: 1.25rem;
+  font-size: 0.9375rem;
 }
 
 .fs-large {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
 }
 
 .fs-x-large {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
 }
 
 .fs-xx-large {
-  font-size: 4rem;
+  font-size: 3.25rem;
 }
 
+@media (min-width: 62.5em) {
+  .fs-x-small {
+    font-size: 0.875rem;
+  }
+  .fs-small {
+    font-size: 1rem;
+  }
+  .fs-med {
+    font-size: 1.25rem;
+  }
+  .fs-large {
+    font-size: 1.5rem;
+  }
+  .fs-x-large {
+    font-size: 2.5rem;
+  }
+  .fs-xx-large {
+    font-size: 4rem;
+  }
+}
 .hero {
   position: relative;
   width: 100%;
   height: 30vh;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 .hero__header {
   position: absolute;
@@ -187,8 +229,7 @@ p {
   bottom: -0.75rem;
   left: 50%;
   translate: -50%;
-  width: calc(100% - 2.8125rem);
-  margin-left: auto;
+  width: calc(100% - 2rem);
 }
 .hero__overlay {
   position: absolute;
@@ -222,6 +263,12 @@ p {
   background-size: 110%;
 }
 @media (min-width: 37.5em) {
+  .hero {
+    margin-bottom: 2rem;
+  }
+  .hero__header {
+    width: calc(100% - 4rem);
+  }
   .hero__overlay {
     height: 60%;
   }
@@ -237,6 +284,10 @@ p {
 @media (min-width: 62.5em) {
   .hero {
     height: 50vh;
+    margin-bottom: 3rem;
+  }
+  .hero__header {
+    width: calc(100% - 4rem);
   }
   .hero__header br {
     display: none;
@@ -255,11 +306,14 @@ p {
   display: flex;
   flex-direction: column;
 }
+.experience__horizontal > :not(:last-child) {
+  margin: 0 0 2rem 0;
+}
 @media (min-width: 37.5em) {
   .experience__horizontal {
     flex-direction: row;
   }
   .experience__horizontal > :not(:last-child) {
-    margin-right: 2rem;
+    margin: 0 2rem 0 0;
   }
 }/*# sourceMappingURL=style.css.map */

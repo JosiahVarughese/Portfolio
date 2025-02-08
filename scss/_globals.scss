@@ -17,32 +17,34 @@ body {
     background-color: $bg-1;
 }
 
-//SPACING
-.container {
+//MOBILE
+.wrapper {
     display: flex;
     flex-direction: column;
     justify-content: end;
     height: auto;
+
+}
+
+.content {
+    > :nth-of-type(odd) {
+        background-color: $bg-1;
+    }
+    > :nth-of-type(even) {
+        background-color: $bg-2;
+    }
 }
 
 section {
-    padding: 2rem;
+    padding: $padding-small;
 
-    &.content-a {
-        background-color: $bg-1;
-    }
-    
-    &.content-b {
-        background-color: $bg-2;
-    }
-    
-    > article:not(:last-child) {
-        margin-bottom: 4rem;
+    article:not(:last-child) {
+        margin-bottom: $padding-med;
     }
 }
 
 .indent {
-    padding: 1rem 0 0 2rem;
+    padding: 1rem 0 0 $padding-small;
     border-left: 1px solid $bg-3;
 }
 
@@ -52,11 +54,6 @@ section {
 
 .footer {
     background-color: $bg-3;
-}
-
-//MOBILE
-h1 {    
-    margin-bottom: 1.25rem;
 }
 
 h2 {
@@ -100,22 +97,50 @@ button {
 .social {
     margin-bottom: 2rem;
 
-    .icon {
+    &__header {
 
     }
 
-    :not(:last-child) {
-        margin-right: 1rem;
+    &__icons {
+        :not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &__icon {
+    
+        }
     }
 }
 
 //TABLET
 @media (min-width: $breakpoint-md) {
 
+    section {
+        padding: $padding-med;
+
+        article:not(:last-child) {
+            margin-bottom: $padding-large;
+        }
+    }
+
+    .indent {
+        padding: 1rem 0 0 $padding-med;
+    }
 }
 
 
 //DESKTOP
 @media (min-width: $breakpoint-lg) {
-    
+
+    section {
+        padding: $padding-med;
+
+        article:not(:last-child) {
+            margin-bottom: $padding-x-large;
+        }
+    }
+
+    .indent {
+        padding: 1rem 0 0 $padding-med;
+    }
 }

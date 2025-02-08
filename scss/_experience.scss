@@ -2,8 +2,12 @@
 
     //MOBILE
     &__horizontal {
-            display: flex;
-            flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        
+        > :not(:last-child) {
+            margin: 0 0 2rem 0;
+        }
     }
 
     //TABLET
@@ -12,7 +16,7 @@
             flex-direction: row;
 
             > :not(:last-child) {
-                margin-right: 2rem;
+                margin: 0 2rem 0 0;
             }
         }
     }

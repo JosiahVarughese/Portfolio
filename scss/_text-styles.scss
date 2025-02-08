@@ -9,8 +9,12 @@ strong, small, i {
     letter-spacing: $ls-med;
 }
 
-a, a:visited {
-    color: $fg-2;
+h1, h2, h3, h4 {
+    line-height: 1;
+}
+
+a, a:visited, a > span {
+    color: $fg-1;
     font-weight: 700;
     letter-spacing: $ls-med;
 }
@@ -60,27 +64,27 @@ p {
 
 //MOBILE
 .fs-x-small {
-    font-size: $fs-14px;
+    font-size: $fs-13px;
 }
 
 .fs-small {
-    font-size: $fs-16px;
+    font-size: $fs-14px;
 }
 
 .fs-med {
-    font-size: $fs-20px;
+    font-size: $fs-15px;
 }
 
 .fs-large {
-    font-size: $fs-24px;
+    font-size: $fs-22px;
 }
 
 .fs-x-large {
-    font-size: $fs-40px;
+    font-size: $fs-28px;
 }
 
 .fs-xx-large {
-    font-size: $fs-64px;
+    font-size: $fs-52px;
 }
 
 //TABLET
@@ -90,5 +94,27 @@ p {
 
 //DESKTOP
 @media (min-width: $breakpoint-lg) {
-
+    .fs-x-small {
+        font-size: $fs-14px;
+    }
+    
+    .fs-small {
+        font-size: $fs-16px;
+    }
+    
+    .fs-med {
+        font-size: $fs-20px;
+    }
+    
+    .fs-large {
+        font-size: $fs-24px;
+    }
+    
+    .fs-x-large {
+        font-size: $fs-40px;
+    }
+    
+    .fs-xx-large {
+        font-size: $fs-64px;
+    }
 }
