@@ -1,7 +1,4 @@
 TODO
-
-• Change the general layout padding and margin for the different breakpoints
-
 • The page is far to wordy, try to make the writing more concise
 
 • Create an About Me/Bio section

@@ -1,22 +1,37 @@
+* {
+    color: $fg-1;
+    font-family: $font-default;
+    letter-spacing: 0;
+}
+
 h1, h2, h3, h4,
 div, span, p,
 ol, ul, li
 strong, small, i {
-    color: $fg-1;
-    font-family: $font-default;
     font-weight: 400;
     line-height: 1.5;
-    letter-spacing: $ls-med;
+    letter-spacing: $ls-0_15em;
 }
 
 h1, h2, h3, h4 {
-    line-height: 1;
+    line-height: 1.1;
 }
 
 a, a:visited, a > span {
     color: $fg-1;
     font-weight: 700;
-    letter-spacing: $ls-med;
+}
+
+button {
+    color: $accent-2;
+    text-transform: uppercase;
+    // font-family: $font-alternative;
+    font-weight: 300;
+
+    .material-symbols-outlined {
+        font-weight: 100;
+        font-size: 2em;
+    }
 }
 
 p {
@@ -25,35 +40,70 @@ p {
     line-height: 2;
 }
 
+span {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+}
+
 .text-style-title {
     color: $accent-1;
+    text-transform: uppercase;
     font-family: $font-title;
     font-weight: 500;
-    letter-spacing: $ls-x-large;
-    line-height: 1.1;
+    line-height: 0.85;
 
-    border-bottom: 0.075em solid $accent-1;
+    border-bottom: 0.025em solid $accent-1;
 }
 
 .text-style-heading-1 {
+    position: relative;
+    left: 0.75em;
+
     color: $accent-3;
-    font-weight: 700;
-    letter-spacing: $ls-large;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-family: $font-alternative;
+    font-size: 1.5vw;
+    font-weight: 500;
+    line-height: 1.5;
 }
+
+.symbol {
+    position: relative;
+    font-family: serif;
+
+    &__before, &__after {
+        bottom: 0.25rem;
+    
+        color: $accent-3;
+
+        font-size: 3em;
+    }
+    &__before::before {
+        content: '\291C';
+    }
+    &__after::after {
+        content: '\2192';
+    }
+}
+
 
 .text-style-heading-2 {
     font-weight: 700;
-    letter-spacing: $ls-med;
 }
 
 .text-style-subtle {
     color: $fg-2;
-    letter-spacing: $ls-med;
+    line-height: 1.1;
 }
 
 .text-style-muted {
     color: $fg-3;
-    letter-spacing: $ls-small;
     line-height: 1.75;
 }
 
@@ -63,58 +113,96 @@ p {
 }
 
 //MOBILE
-.fs-x-small {
-    font-size: $fs-13px;
-}
+.font-size-s-l { font-size: $fs-14px; }
+.font-size-s   { font-size: $fs-13px; }
+.font-size-s-s { font-size: $fs-12px; }
 
-.fs-small {
-    font-size: $fs-14px;
-}
+.font-size-m-l { font-size: $fs-15px; }
+.font-size-m   { font-size: $fs-15px; }
+.font-size-m-s { font-size: $fs-15px; }
 
-.fs-med {
-    font-size: $fs-15px;
-}
+.font-size-l-l { font-size: $fs-20px; }
+.font-size-l   { font-size: $fs-28px; }
+.font-size-l-s { font-size: $fs-40px; }
 
-.fs-large {
-    font-size: $fs-22px;
-}
+.letter-spacing-s-l { letter-spacing: $ls-1em; }
+.letter-spacing-s   { letter-spacing: $ls-1em; }
+.letter-spacing-s-s { letter-spacing: $ls-1em; }
 
-.fs-x-large {
-    font-size: $fs-28px;
-}
+.letter-spacing-m-l { letter-spacing: $ls-1em; }
+.letter-spacing-m   { letter-spacing: $ls-1em; }
+.letter-spacing-m-s { letter-spacing: $ls-1em; }
 
-.fs-xx-large {
-    font-size: $fs-52px;
-}
+.letter-spacing-l-l { letter-spacing: $ls-1em; }
+.letter-spacing-l   { letter-spacing: $ls-1em; }
+.letter-spacing-l-s { letter-spacing: $ls-1em; }
 
 //TABLET
 @media (min-width: $breakpoint-md) {
+    .text-style-title {
+        text-align: center;
+    }
 
+    .text-style-heading-1 {
+        br { display: none; }
+    }
+
+
+    .font-size-s-l { font-size: $fs-14px; }
+    .font-size-s   { font-size: $fs-13px; }
+    .font-size-s-s { font-size: $fs-12px; }
+
+    .font-size-m-l { font-size: $fs-15px; }
+    .font-size-m   { font-size: $fs-15px; }
+    .font-size-m-s { font-size: $fs-15px; }
+
+    .font-size-l-l { font-size: $fs-20px; }
+    .font-size-l   { font-size: $fs-28px; }
+    .font-size-l-s { font-size: $fs-40px; }
+
+
+    .letter-spacing-s-l { letter-spacing: $ls-1em; }
+    .letter-spacing-s   { letter-spacing: $ls-1em; }
+    .letter-spacing-s-s { letter-spacing: $ls-1em; }
+
+    .letter-spacing-m-l { letter-spacing: $ls-1em; }
+    .letter-spacing-m   { letter-spacing: $ls-1em; }
+    .letter-spacing-m-s { letter-spacing: $ls-1em; }
+
+    .letter-spacing-l-l { letter-spacing: $ls-1em; }
+    .letter-spacing-l   { letter-spacing: $ls-1em; }
+    .letter-spacing-l-s { letter-spacing: $ls-1em; }
 }
 
 //DESKTOP
 @media (min-width: $breakpoint-lg) {
-    .fs-x-small {
-        font-size: $fs-14px;
+    .text-style-title {
+        text-align: left;
     }
+
     
-    .fs-small {
-        font-size: $fs-16px;
-    }
+    .font-size-l-l { font-size: $fs-64px; }
+    .font-size-l   { font-size: $fs-48px; }
+    .font-size-l-s { font-size: $fs-38px; }
+
+    .font-size-m-l { font-size: $fs-32px; }
+    .font-size-m   { font-size: $fs-24px; }
+    .font-size-m-s { font-size: $fs-20px; }
+
+    .font-size-s-l { font-size: $fs-18px; }
+    .font-size-s   { font-size: $fs-16px; }
+    .font-size-s-s { font-size: $fs-12px; }
+
+
+    .letter-spacing-l-l { letter-spacing: $ls-1em; }
+    .letter-spacing-l   { letter-spacing: $ls-0_75em; }
+    .letter-spacing-l-s { letter-spacing: $ls-0_5em; }
     
-    .fs-med {
-        font-size: $fs-20px;
-    }
+    .letter-spacing-m-l { letter-spacing: $ls-0_25em; }
+    .letter-spacing-m   { letter-spacing: $ls-0_15em; }
+    .letter-spacing-m-s { letter-spacing: $ls-0_1em; }
     
-    .fs-large {
-        font-size: $fs-24px;
-    }
-    
-    .fs-x-large {
-        font-size: $fs-40px;
-    }
-    
-    .fs-xx-large {
-        font-size: $fs-64px;
-    }
+    .letter-spacing-s-l { letter-spacing: $ls-1em; }
+    .letter-spacing-s   { letter-spacing: $ls-1em; }
+    .letter-spacing-s-s { letter-spacing: $ls-1em; }
 }

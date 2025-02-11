@@ -1,6 +1,21 @@
-//TEXT & COLORS
+//COLORS
+$fg-1: rgb(235, 235, 235);
+$fg-2: rgb(195, 195, 195);
+$fg-3: rgb(180, 180, 180);
+
+$accent-1: rgb(173, 173, 248);
+$accent-2: rgb(255, 100, 165);
+$accent-3: rgb(97, 81, 51);
+
+$bg-1: rgb(18, 18, 18);
+$bg-2: rgb(23, 23, 23);
+$bg-3: rgb(41, 41, 41);
+
+
+//TEXT
 $font-default: Raleway, Sans-serif;
-$font-title: Raleway, Sans-serif;
+$font-title: Bungee Hairline, Sans-serif;
+$font-alternative: Poiret One, Sans-serif;
 
 $fs-10px: 0.625rem;
 $fs-11px: 0.6875rem;
@@ -15,34 +30,35 @@ $fs-22px: 1.375rem;
 $fs-24px: 1.5rem;
 $fs-28px: 1.75rem;
 $fs-32px: 2rem;
+$fs-34px: 2.25rem;
+$fs-38px: 2.375rem;
 $fs-40px: 2.5rem;
+$fs-48px: 3rem;
 $fs-52px: 3.25rem;
 $fs-64px: 4rem;
+$fs-68px: 4.25rem;
+$fs-72px: 4.5rem;
+$fs-84px: 5.25rem;
+$fs-80px: 5rem;
 
-$ls-small: 0.1em;
-$ls-med: 0.175em;
-$ls-large: 0.2em;
-$ls-x-large: 0.25em;
-
-$breakpoint-md: 37.5em;
-$breakpoint-lg: 62.5em;
-
-//DARK
-$fg-1: rgb(235, 235, 235);
-$fg-2: rgb(190, 190, 190);
-$fg-3: rgb(180, 180, 180);
-
-$accent-1: rgb(173, 173, 248);
-$accent-2: rgb(255, 100, 165);
-$accent-3: rgb(202, 161, 84);
-
-$bg-1: rgb(18, 18, 18);
-$bg-2: rgb(23, 23, 23);
-$bg-3: rgb(41, 41, 41);
+$ls-0_1em: 0.1em;
+$ls-0_15em: 0.15em;
+$ls-0_2em: 0.2em;
+$ls-0_25em: 0.2em;
+$ls-0_5em: 0.5em;
+$ls-0_75em: 0.75em;
+$ls-1em: 1em;
 
 
 //LAYOUT
+$breakpoint-md: 37.5em;
+$breakpoint-lg: 62.5em;
+
 $padding-small: 1rem;
 $padding-med: 2rem;
 $padding-large: 3rem;
 $padding-x-large: 4rem;
+
+$pfp-size-mobile: 12rem;
+$pfp-size-tablet: 14rem;
+$pfp-size-desktop: 15rem;
