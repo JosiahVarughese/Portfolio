@@ -36,7 +36,7 @@ body {
 }
 
 section {
-    padding: $padding-small;
+    padding: $padding-small $padding-small $padding-med;
 
     article:not(:last-child) {
         margin-bottom: $padding-med;
@@ -60,7 +60,7 @@ section {
     text-align: center;
 
     padding: 1rem 0;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     
     > .text {
         display: inline-flex;
@@ -138,7 +138,7 @@ button {
 
     .section-heading {
         padding: 1.5rem 0;
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
     }
 
     .indent {

@@ -1,5 +1,7 @@
 TODO
-• The page is far to wordy, try to make the writing more concise
+• Fix the font sizing and letter spacing for tablet and mobile
+
+• Improve the writing in the large paragraphs
 
 • Create an About Me/Bio section
     - Create a resume(s) catered specifically to the portfolio & add a resume/pdf link to the portfolio

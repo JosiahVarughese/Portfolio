@@ -54,21 +54,21 @@ span {
     text-transform: uppercase;
     font-family: $font-title;
     font-weight: 500;
-    line-height: 0.85;
+    line-height: 1.25;
 
     border-bottom: 0.025em solid $accent-1;
 }
 
 .text-style-heading-1 {
     position: relative;
-    left: 0.75em;
+    left: 0.375em;
 
     color: $accent-3;
     text-align: center;
     text-transform: uppercase;
 
     font-family: $font-alternative;
-    font-size: 1.5vw;
+    font-size: inherit;
     font-weight: 500;
     line-height: 1.5;
 }
@@ -81,17 +81,16 @@ span {
         bottom: 0.25rem;
     
         color: $accent-3;
-
-        font-size: 3em;
     }
     &__before::before {
         content: '\291C';
+        font-size: 1.3em;
     }
     &__after::after {
         content: '\2192';
+        font-size: 1.1em;
     }
 }
-
 
 .text-style-heading-2 {
     font-weight: 700;
@@ -113,29 +112,33 @@ span {
 }
 
 //MOBILE
-.font-size-s-l { font-size: $fs-14px; }
-.font-size-s   { font-size: $fs-13px; }
-.font-size-s-s { font-size: $fs-12px; }
+.letter-spacing-l-l { letter-spacing: $ls-1em; }
+.letter-spacing-l   { letter-spacing: $ls-0_75em; }
+.letter-spacing-l-s { letter-spacing: $ls-0_5em; }
 
-.font-size-m-l { font-size: $fs-15px; }
-.font-size-m   { font-size: $fs-15px; }
-.font-size-m-s { font-size: $fs-15px; }
-
-.font-size-l-l { font-size: $fs-20px; }
-.font-size-l   { font-size: $fs-28px; }
-.font-size-l-s { font-size: $fs-40px; }
+.letter-spacing-m-l { letter-spacing: $ls-0_25em; }
+.letter-spacing-m   { letter-spacing: $ls-0_15em; }
+.letter-spacing-m-s { letter-spacing: $ls-0_1em; }
 
 .letter-spacing-s-l { letter-spacing: $ls-1em; }
 .letter-spacing-s   { letter-spacing: $ls-1em; }
 .letter-spacing-s-s { letter-spacing: $ls-1em; }
 
-.letter-spacing-m-l { letter-spacing: $ls-1em; }
-.letter-spacing-m   { letter-spacing: $ls-1em; }
-.letter-spacing-m-s { letter-spacing: $ls-1em; }
+.font-size-l-l { font-size: $fs-40px; }
+.font-size-l   { font-size: $fs-32px; }
+.font-size-l-s { font-size: $fs-28px; }
 
-.letter-spacing-l-l { letter-spacing: $ls-1em; }
-.letter-spacing-l   { letter-spacing: $ls-1em; }
-.letter-spacing-l-s { letter-spacing: $ls-1em; }
+.font-size-m-l { font-size: $fs-18px; }
+.font-size-m   { font-size: $fs-16px; }
+.font-size-m-s { font-size: $fs-15px; }
+
+.font-size-s-l { font-size: $fs-14px; }
+.font-size-s   { font-size: $fs-13px; }
+.font-size-s-s { font-size: $fs-12px; }
+
+.font-size-dynamic-title { font-size: 14vw; }
+.font-size-dynamic-1 { font-size: 4.75vw; }
+.font-size-dynamic-2 { font-size: 5vw; }
 
 //TABLET
 @media (min-width: $breakpoint-md) {
@@ -147,41 +150,30 @@ span {
         br { display: none; }
     }
 
+    .font-size-l-l { font-size: $fs-72px; }
+    .font-size-l   { font-size: $fs-32px; }
+    .font-size-l-s { font-size: $fs-28px; }
+    
+    .font-size-m-l { font-size: $fs-20px; }
+    .font-size-m   { font-size: $fs-18px; }
+    .font-size-m-s { font-size: $fs-16px; }
 
     .font-size-s-l { font-size: $fs-14px; }
     .font-size-s   { font-size: $fs-13px; }
     .font-size-s-s { font-size: $fs-12px; }
 
-    .font-size-m-l { font-size: $fs-15px; }
-    .font-size-m   { font-size: $fs-15px; }
-    .font-size-m-s { font-size: $fs-15px; }
-
-    .font-size-l-l { font-size: $fs-20px; }
-    .font-size-l   { font-size: $fs-28px; }
-    .font-size-l-s { font-size: $fs-40px; }
-
-
-    .letter-spacing-s-l { letter-spacing: $ls-1em; }
-    .letter-spacing-s   { letter-spacing: $ls-1em; }
-    .letter-spacing-s-s { letter-spacing: $ls-1em; }
-
-    .letter-spacing-m-l { letter-spacing: $ls-1em; }
-    .letter-spacing-m   { letter-spacing: $ls-1em; }
-    .letter-spacing-m-s { letter-spacing: $ls-1em; }
-
-    .letter-spacing-l-l { letter-spacing: $ls-1em; }
-    .letter-spacing-l   { letter-spacing: $ls-1em; }
-    .letter-spacing-l-s { letter-spacing: $ls-1em; }
+    .font-size-dynamic-title { font-size: 9.25vw; }
+    .font-size-dynamic-1 { font-size: 4vw; }
+    .font-size-dynamic-2 { font-size: 2.75vw; }
 }
 
 //DESKTOP
 @media (min-width: $breakpoint-lg) {
     .text-style-title {
-        text-align: left;
+        text-align: right;
     }
 
-    
-    .font-size-l-l { font-size: $fs-64px; }
+    .font-size-l-l { font-size: $fs-120px; }
     .font-size-l   { font-size: $fs-48px; }
     .font-size-l-s { font-size: $fs-38px; }
 
@@ -193,16 +185,7 @@ span {
     .font-size-s   { font-size: $fs-16px; }
     .font-size-s-s { font-size: $fs-12px; }
 
-
-    .letter-spacing-l-l { letter-spacing: $ls-1em; }
-    .letter-spacing-l   { letter-spacing: $ls-0_75em; }
-    .letter-spacing-l-s { letter-spacing: $ls-0_5em; }
-    
-    .letter-spacing-m-l { letter-spacing: $ls-0_25em; }
-    .letter-spacing-m   { letter-spacing: $ls-0_15em; }
-    .letter-spacing-m-s { letter-spacing: $ls-0_1em; }
-    
-    .letter-spacing-s-l { letter-spacing: $ls-1em; }
-    .letter-spacing-s   { letter-spacing: $ls-1em; }
-    .letter-spacing-s-s { letter-spacing: $ls-1em; }
+    .font-size-dynamic-title { font-size: 7.9vw; }
+    .font-size-dynamic-1 { font-size: 2.75vw; }
+    .font-size-dynamic-2 { font-size: 2.25vw; }
 }
