@@ -1,0 +1,120 @@
+.content {
+
+    //MOBILE
+    section {
+        article {
+            &:not(:last-child) {
+                margin-bottom: $padding-med;
+            }
+            p:not(:last-child) { 
+                margin-bottom: 0.75rem;
+            }
+        }
+    }
+    
+    .indent {
+        padding: $padding-small 0 0 $padding-small;
+        border-left: 1px solid $secondary-3;
+    }
+    
+    .header {
+        margin-bottom: 0.5rem;
+    
+        > * {
+            display: block;
+        }
+    }
+    
+    
+    .section-header {
+        text-align: center;
+    
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+        
+        > h2 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+    
+            padding: 1rem 0;
+            
+            border-bottom: 1px solid rgba($accent-3, 40%);
+    
+            .text {
+                position: relative;
+                left: 0.35em;
+                margin-bottom: 0;
+            }
+    
+            .symbol {
+                position: relative;
+                bottom: 0.25rem;
+            }
+        }
+    }
+    
+    .horizontal {
+        display: flex;
+        flex-direction: column;
+        
+        > :not(:last-child) {
+            margin: 0 0 1rem 0;
+        }
+    }
+
+    //TABLET
+    @media (min-width: $breakpoint-md) {
+
+        section {
+            article:not(:last-child) {
+                margin-bottom: $padding-large;
+            }
+        }
+
+        .section-header {
+            padding: 1.5rem 0;
+            margin-bottom: 2.5rem;
+        }
+
+        .indent {
+            padding: $padding-med 0 0 $padding-med;
+        }
+
+        .horizontal {
+            flex-direction: column;
+    
+            > :not(:last-child) {
+                margin: 0 0 2rem 0;
+            }
+        }
+    }
+
+    //DESKTOP
+    @media (min-width: $breakpoint-lg) {
+
+        section {
+            article:not(:last-child) {
+                margin-bottom: $padding-x-large;
+            }
+        }
+
+        .section-header {
+            padding: 5rem 0;
+            margin-bottom: 4rem;
+        }
+
+        .indent {
+            padding: $padding-small 0 0 $padding-med;
+        }
+
+        .horizontal {
+            flex-direction: row;
+
+            > :not(:last-child) {
+                margin: 0 2rem 0 0;
+            }
+        }
+    }
+
+}

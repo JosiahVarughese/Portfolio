@@ -1,6 +1,5 @@
+//SETUP
 * {
-    color: $text-default;
-    font-family: $font-default;
     margin: 0;
     padding: 0;
 }
@@ -15,154 +14,115 @@ html {
 }
 
 body {
-    background-color: $bg-1;
+    background-color: $secondary-1;
 }
 
-.container {
+//MOBILE
+.wrapper {
     display: flex;
     flex-direction: column;
     justify-content: end;
     height: auto;
+    width: 100vw;
 }
 
-.content {
-    border-left: 1px solid white;
+header {
 
-    
-    &__a {
-        background-color: $bg-1;
-        h2 {
-            color: $accent-3;
+}
+
+main {
+    section:nth-of-type(odd) {
+        background-color: $secondary-1;
+    }
+    section:nth-of-type(even) {
+        background-color: $secondary-2;
+    }
+}
+
+footer {
+    background-color: $secondary-3;
+
+    .header {
+        margin-bottom: 2rem;
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+
+        :not(:last-child) {
+            margin-right: 1.5rem;
         }
     }
-    
-    &__b {
-        background-color: $bg-2;
-        h2 {
-            color: $text-default;
-        }
-    }
-    
-    padding: 1.25rem 2rem;
 }
 
-a:hover, a:hover span {
-    color: $accent-2;
-    transition: 150ms ease-in-out;
-}
-
-
-//MOBILE
-h1 {
-    color: $accent-1;
-    
-    font-family: $font-title;
-    font-size: $fs-large;
-    font-weight: 500;
-    letter-spacing: $ls-large;
-    
-    margin-bottom: 1.25rem;
-    
-    border-bottom: calc($fs-xlarge * 0.075) solid $accent-1;
+section {
+    padding: $padding-small $padding-small $padding-med;
 }
 
 h2 {
-    font-size: $fs-medium;
-    font-weight: 700;
-    letter-spacing: $ls-medium;
-    line-height: 1.5;
-    
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
-
-p {
-    font-size: $fs-default;
-    font-weight: 400;
-    letter-spacing: $ls-default;
-    line-height: 1.75;
-
-    margin-bottom: 2rem;
+h3 {
+    margin-bottom: 0.5rem;
+}
+h4 {
+    margin-bottom: 0.25rem;
 }
 
 button {
     display: flex;
-
     align-items: center;
     justify-content: space-evenly;
 
-    color: $accent-2;
-    background-color: transparent;
+    text-align: center;
 
-    text-transform: uppercase;
-    font-size: $fs-small;
-    font-weight: 500;
-    letter-spacing: $ls-small;
+    background-color: transparent;
     
     border: 1px solid $accent-2;
-    border-radius: 2rem;
-    padding: 1.125rem 2rem;
+    border-radius: 2em;
 
-    margin-bottom: 2.5rem;
-
-    > span {
-        color: inherit;
-        font-size: inherit;
-    }
-
-    > .icon {
-        font-size: 125%;
-    }
+    padding: 0.5rem 1rem;
 
     :not(:last-child) {
-        margin-right: calc($fs-small * 0.3);
-    }
-}
-
-.social {
-    margin-bottom: 2rem;
-
-    .icon {
-        font-size: $fs-large;
-    }
-
-    :not(:last-child) {
-        margin-right: 1rem;
+        margin-right: 0.25rem;
     }
 }
 
 //TABLET
 @media (min-width: $breakpoint-md) {
-    h1 {
-        font-size: $fs-xxlarge;
-        letter-spacing: $ls-xxlarge;
-        border-bottom: calc($fs-xxlarge * 0.05) solid $accent-1;
-    }
-    
-    h2 {
-        font-size: $fs-large;
-        letter-spacing: $ls-large;
-    }
-    
-    p {
-        font-size: $fs-medium;
-        letter-spacing: $ls-medium;
-    }
-    
-    button {
-        font-size: $fs-default;
-        letter-spacing: $ls-default;
+
+    section {
+        padding: $padding-med;
     }
 
-    .social {
-    
-        .icon {
-            font-size: $fs-large;
-        }
+    h2 {
+        margin-bottom: 0;
+    }
+    h3 {
+        margin-bottom: 0.5rem;
+    }
+    h4 {
+        margin-bottom: 0.25rem;
     }
 }
 
 
 //DESKTOP
 @media (min-width: $breakpoint-lg) {
-    
+
+    section {
+        padding: $padding-large $padding-med;
+    }
+
+
+    h2 {
+        margin-bottom: 1.5rem;
+    }
+    h3 {
+        margin-bottom: 0.75rem;
+    }
+    h4 {
+        margin-bottom: 0.5rem;
+    }
 }

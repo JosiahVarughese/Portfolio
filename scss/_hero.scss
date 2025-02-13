@@ -1,99 +1,129 @@
 .hero {
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     width: 100%;
-    height: 50vh;
+    height: 65vw;
 
+    padding: 0 $padding-small 0;
+    margin-bottom: 0.5rem;
+
+    background-image: url(../images/Downtown.jpg);
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     &__header {
-        position: absolute;
-        z-index: 2;
+        position: relative;
+        bottom: 3%;
+        z-index: 3;
 
-        bottom: -0.75rem;
-        left: 50%;
-        translate: -50%;
+        padding: 0.5rem 0;
+        margin-top: auto;
 
-        width: calc(100% - 2.8125rem);
+        border-bottom: 0.025em solid $accent-1;
     }
 
-    &__overlay {
+    &__overlay-a, &__overlay-b {
         position: absolute;
-        z-index: 1;
 
         bottom: 0;
         right: 0;
-
-        width: 100%;
-        height: 25%;
-        background-image: linear-gradient(transparent, $bg-1);
-    }
-    
-    &__img-background {
-        width: 100%;
-        height: 100%;
         
-        background-image: url(../images/Downtown.jpg);
-        background-position: 50% 40%;
-        background-repeat: no-repeat;
-        background-size: cover;
+        width: 100%;
+    }
+    &__overlay-a {
+        z-index: 2;
+        height: 40%;
+        
+        background-image: linear-gradient(transparent, transparent, $secondary-1);
+    }
+    &__overlay-b {
+        z-index: 0;
+        height: 50%;
+
+        background-image: linear-gradient(transparent, darken($accent-2, 63%));
     }
     
     &__img_portrait {
         position: absolute;
+        z-index: 1;
         
-        width: 12rem;
-        height: 12rem;
-
-        bottom: 7%;
+        top: $padding-small;
         right: 0;
-        margin-right: 1.41rem;
 
-        z-index: 0;
-        
+        width: $pfp-size-mobile;
+        height: $pfp-size-mobile;
+
+        margin: 0 $padding-small $padding-small 0;
+
         border-radius: 50%;
         
         background-image: url(../images/PortraitFront.jpeg);
         background-repeat: no-repeat;
         background-position: 50% 35%;
-        background-size: 110%;
+        background-size: 105%;
     }
     
     //TABLET
     @media (min-width: $breakpoint-md) {
+        height: calc($pfp-size-tablet * 1.4);
 
-        &__overlay {
-            height: 60%;
+        padding: 0 $padding-med 0;
+        margin-bottom: 1rem;
+
+        &__header {
+            > br { display: none; }
         }
 
         &__img_portrait {
-            width: 14rem;
-            height: 14rem;
+            height: $pfp-size-tablet;
+            width: $pfp-size-tablet;
 
-            bottom: 50%;
-            left: 0;
-            margin-left: 1.41rem;
-            background-position: 50% 35%;
+            margin: 0 0 $padding-large 0;
+
+            top: $padding-small;
+            left: 50%;
+            translate: -50%;
+        }
+
+        &__overlay-a {
+            height: 40%;
+        }
+        &__overlay-b {
+            height: 65%;
         }
     }
 
-    
-
     //DESKTOP
     @media (min-width: $breakpoint-lg) {
+        height: calc($pfp-size-desktop + $padding-large);
+
+        padding: 0 $padding-med 0;
+        margin-bottom: 3rem;
 
         &__header {
-            br {
-                display: none;
-            }
-        }
-
-        &__overlay {
-            height: 30%;
+            text-align: right;
         }
 
         &__img_portrait {
-            height: 18rem;
-            width: 18rem;
-            bottom: 15%;
+            height: $pfp-size-desktop;
+            width: $pfp-size-desktop;
+
+            margin: 0 0 $padding-small $padding-med;
+
+            top: auto;
+            left: 0;
+            bottom: $padding-small;
+            translate: 0;
+        }
+
+        &__overlay-a {
+            height: 35%;
+        }
+        &__overlay-b {
+            height: 80%;
         }
     }
 }

@@ -1,0 +1,176 @@
+* {
+    font-family: $font-default;
+
+    letter-spacing: 0;
+    line-height: 1;
+    border-color: inherit;
+}
+
+body {
+    color: $primary-1;
+}
+
+//Setting the letter spacing for elements that may exist by themselves
+h1, h2, h3, h4,
+p, small, li {
+    letter-spacing: $ls-0_15em;
+}
+
+p, small, li {
+    font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.1;
+}
+
+//Setting base values to be inherited for commonly nested elements
+div, p, small, span, strong, u, i, a, a:visited {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+div, span, strong, u, i, a {
+    letter-spacing: inherit;
+}
+
+span, u {
+    font-weight: inherit;
+}
+
+strong {
+    font-size: 1.075em;
+    font-weight: 700;
+}
+
+p {
+    white-space: pre-line;
+    
+    line-height: 1.75;
+    
+    a, a:visited {
+        color: $accent-2;
+    }
+}
+
+.font-title {
+    text-transform: uppercase;
+    
+    font-family: $font-title;
+}
+
+.font-alternative {
+    text-transform: uppercase;
+
+    font-family: $font-alternative;
+}
+
+.symbol {
+    font-family: serif;
+
+    &__before::before {
+        content: '\291C';
+        font-size: 1.3em;
+    }
+    &__after::after {
+        content: '\2192';
+        font-size: 1.1em;
+    }
+}
+
+.font-weight-light { font-weight: 100; }
+.font-weight-regular { font-weight: 400; }
+.font-weight-bold { font-weight: 700; }
+
+//MOBILE
+.color-primary-1  { color: $primary-1; }
+.color-primary-2 { color: $primary-2; }
+.color-primary-3  { color: $primary-3; }
+
+.color-accent-1 { color: $accent-1; }
+.color-accent-2 { color: $accent-2; }
+.color-accent-3 { color: $accent-3; }
+
+.color-secondary-1  { color: $secondary-1; }
+.color-secondary-2 { color: $secondary-2; }
+.color-secondary-3  { color: $secondary-3; }
+
+.letter-spacing-l-l { letter-spacing: $ls-1em; }
+.letter-spacing-l   { letter-spacing: $ls-0_75em; }
+.letter-spacing-l-s { letter-spacing: $ls-0_5em; }
+
+.letter-spacing-m-l { letter-spacing: $ls-0_25em; }
+.letter-spacing-m   { letter-spacing: $ls-0_15em; }
+.letter-spacing-m-s { letter-spacing: $ls-0_1em; }
+
+.line-height-2 { line-height: 2; }
+.line-height-1_5 { line-height: 1.5; }
+.line-height-1 { line-height: 1; }
+
+.font-size-l-l { font-size: $fs-40px; }
+.font-size-l   { font-size: $fs-32px; }
+.font-size-l-s { font-size: $fs-28px; }
+
+.font-size-m-l { font-size: $fs-18px; }
+.font-size-m   { font-size: $fs-16px; }
+.font-size-m-s { font-size: $fs-15px; }
+
+.font-size-s-l { font-size: $fs-14px; }
+.font-size-s   { font-size: $fs-13px; }
+.font-size-s-s { font-size: $fs-12px; }
+
+.font-size-dynamic-title { font-size: 14vw; }
+.font-size-dynamic-1 { font-size: 4.75vw; }
+.font-size-dynamic-2 { font-size: 5vw; }
+
+//TABLET
+@media (min-width: $breakpoint-md) {
+    .text-style-title {
+        text-align: center;
+    }
+
+    .text-style-heading-1 {
+        br { display: none; }
+    }
+
+    .font-size-l-l { font-size: $fs-72px; }
+    .font-size-l   { font-size: $fs-32px; }
+    .font-size-l-s { font-size: $fs-28px; }
+    
+    .font-size-m-l { font-size: $fs-20px; }
+    .font-size-m   { font-size: $fs-18px; }
+    .font-size-m-s { font-size: $fs-16px; }
+
+    .font-size-s-l { font-size: $fs-14px; }
+    .font-size-s   { font-size: $fs-13px; }
+    .font-size-s-s { font-size: $fs-12px; }
+
+    .font-size-dynamic-title { font-size: 9.25vw; }
+    .font-size-dynamic-1 { font-size: 4vw; }
+    .font-size-dynamic-2 { font-size: 2.75vw; }
+}
+
+//DESKTOP
+@media (min-width: $breakpoint-lg) {
+    .text-style-title {
+        text-align: right;
+    }
+
+    .font-size-l-l { font-size: $fs-120px; }
+    .font-size-l   { font-size: $fs-48px; }
+    .font-size-l-s { font-size: $fs-38px; }
+
+    .font-size-m-l { font-size: $fs-32px; }
+    .font-size-m   { font-size: $fs-24px; }
+    .font-size-m-s { font-size: $fs-20px; }
+
+    .font-size-s-l { font-size: $fs-18px; }
+    .font-size-s   { font-size: $fs-16px; }
+    .font-size-s-s { font-size: $fs-12px; }
+
+    .font-size-dynamic-title { font-size: 7.9vw; }
+    .font-size-dynamic-1 { font-size: 2.75vw; }
+    .font-size-dynamic-2 { font-size: 2.25vw; }
+}

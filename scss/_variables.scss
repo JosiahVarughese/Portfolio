@@ -1,42 +1,78 @@
+//COLORS
+$primary-1: rgb(235, 235, 235);
+$primary-2: rgb(195, 195, 195);
+$primary-3: rgb(180, 180, 180);
+
+$accent-1: rgb(143, 143, 255);
+$accent-2: rgb(255, 100, 165);
+$accent-3: rgb(97, 81, 51);
+
+$secondary-1: rgb(18, 18, 18);
+$secondary-2: rgb(23, 23, 23);
+$secondary-3: rgb(36, 36, 36);
+
+
+// $primary-1: rgb(0, 0, 0);
+// $primary-2: rgb(255, 191, 0);
+// $primary-3: rgb(144, 144, 144);
+
+// $accent-1: rgb(120, 255, 235);
+// $accent-2: rgb(255, 100, 165);
+// $accent-3: rgb(255, 132, 0);
+
+// $secondary-1: rgb(255, 255, 255);
+// $secondary-2: rgb(255, 251, 250);
+// $secondary-3: rgb(255, 227, 178);
+
+
+//TEXT
 $font-default: Raleway, Sans-serif;
-$font-title: Raleway, Sans-serif;
+$font-title: Monoton, Sans-serif;
+$font-alternative: Poiret One, Sans-serif;
 
-$fs-small: 0.875rem;
-$fs-default: 1.125rem;
-$fs-medium: 1.2rem;
-$fs-large: 2.5rem;
-$fs-xlarge: 3.5rem;
-$fs-xxlarge: 6rem;
+$fs-10px: 0.625rem;
+$fs-11px: 0.6875rem;
+$fs-12px: 0.75rem;
+$fs-13px: 0.8125rem;
+$fs-14px: 0.875rem;
+$fs-15px: 0.9375rem;
+$fs-16px: 1rem;
+$fs-18px: 1.125rem;
+$fs-20px: 1.25rem;
+$fs-22px: 1.375rem;
+$fs-24px: 1.5rem;
+$fs-28px: 1.75rem;
+$fs-32px: 2rem;
+$fs-34px: 2.25rem;
+$fs-38px: 2.375rem;
+$fs-40px: 2.5rem;
+$fs-48px: 3rem;
+$fs-52px: 3.25rem;
+$fs-64px: 4rem;
+$fs-68px: 4.25rem;
+$fs-72px: 4.5rem;
+$fs-80px: 5rem;
+$fs-84px: 5.25rem;
+$fs-120px: 7.5rem;
 
-$ls-small: calc($fs-small * 0.3);
-$ls-default: calc($fs-default * 0.2);
-$ls-medium: calc($fs-medium * 0.125);
-$ls-large: calc($fs-large * 0.1);
-$ls-xlarge: calc($fs-xlarge * 0.1);
-$ls-xxlarge: calc($fs-xxlarge * 0.1);
+$ls-0_1em: 0.1em;
+$ls-0_15em: 0.15em;
+$ls-0_2em: 0.2em;
+$ls-0_25em: 0.2em;
+$ls-0_5em: 0.5em;
+$ls-0_75em: 0.75em;
+$ls-1em: 1em;
 
+
+//LAYOUT
 $breakpoint-md: 37.5em;
 $breakpoint-lg: 62.5em;
 
-//DARK
-$text-default: rgb(235, 235, 235);
+$padding-small: 1rem;
+$padding-med: 2rem;
+$padding-large: 3rem;
+$padding-x-large: 4rem;
 
-$accent-1: rgb(173, 173, 248);
-$accent-2: rgb(255, 100, 165);
-$accent-3: rgb(202, 161, 84);
-
-$bg-1: rgb(18, 18, 18);
-$bg-2: rgb(44, 44, 44);
-$bg-3: rgb(107, 107, 107);
-
-
-//LIGHT
-// $text-default: rgb(0, 0, 0);
-
-// $accent-1: rgb(88, 218, 185);
-// $accent-2: rgb(255, 100, 165);
-// $accent-3: rgb(255, 200, 98);
-
-// $bg-1: rgb(255, 255, 255);
-// $bg-2: rgb(255, 255, 255);
-// $bg-3: rgb(190, 190, 190);
+$pfp-size-mobile: 12rem;
+$pfp-size-tablet: 16rem;
+$pfp-size-desktop: 20rem;

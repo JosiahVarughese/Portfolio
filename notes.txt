@@ -1,34 +1,24 @@
 TODO
-• Test the dynamic Github url fixes to make sure your current hrefs will work will work.
-You may need to replace the "/path" pathing with "./path" pathing.
+• Consider how you would want things organized if you were to move to a component-based system.
+ Make your naming conventions more consistent
 
-• Develop a homepage/nav/landing page
-    - Setup a mobile-first responsive layout use the figma rough drafts to define the different necessary sections
-        - Separate styles rules into different files
-        - Create media queries & breakpoints for each platform
+• Finish a basic About Me section
+ What does an about me section need to have in it?
 
-• Develop an experience section
-    - Fill out bio
-    - Create a resume catered specifically to the portfolio
-    - Add a resume/pdf link to the portfolio
-    - Consider whether or not adding some sort of HTML experience section is necessary or helpful
-    - 
+• Add horizontal scrolling for .horizontal
 
-• Identify different sections + potential scaling issues
-    plan the page layout
-    setup breakpoints for different platforms
+• Add a dark/light/system switch?
 
-Known issues to correct
+• Create a resume(s) catered specifically to the portfolio & add a resume/pdf link?
+
+• What other functions do we want to add to the page? Does it need anything else right now? Maybe it's better to switch your focus to personal projects.
+ What do we want to do with the site in the long term?
+
+
+KNOWN ISSUES
 • Image scaling, pixel perfect images, image breakpoints.
 Once you have professional photos for your website, make sure to create different sizes for different the platforms
  so the doesn't take unnecessarily long to load.
-
-• Style attributes in the HTML.
-You did a bunch of ghetto styling in the index page, you should replace this with proper html/css styling.
-
-• The "Technologies I've Used" and "Things I've Tackled.." sections need to change from flex direction row to column based on the breakpoints.
-
-• 
 
 
 CONTENT
