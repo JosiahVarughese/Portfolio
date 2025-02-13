@@ -22,44 +22,32 @@ body {
   flex-direction: column;
   justify-content: end;
   height: auto;
+  width: 100vw;
 }
 
-.content > :nth-of-type(odd) {
+main section:nth-of-type(odd) {
   background-color: rgb(18, 18, 18);
 }
-.content > :nth-of-type(even) {
+main section:nth-of-type(even) {
   background-color: rgb(23, 23, 23);
+}
+
+footer {
+  background-color: rgb(36, 36, 36);
+}
+footer .header {
+  margin-bottom: 2rem;
+}
+footer .social {
+  display: flex;
+  align-items: center;
+}
+footer .social :not(:last-child) {
+  margin-right: 1.5rem;
 }
 
 section {
   padding: 1rem 1rem 2rem;
-}
-section article:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.indent {
-  padding: 1rem 0 0 1rem;
-  border-left: 1px solid rgb(41, 41, 41);
-}
-
-.header {
-  margin-bottom: 0.5rem;
-}
-
-.footer {
-  background-color: rgb(41, 41, 41);
-}
-
-.section-heading {
-  text-align: center;
-  padding: 1rem 0;
-  margin-bottom: 2rem;
-}
-.section-heading > .text {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
 h2 {
@@ -72,10 +60,6 @@ h3 {
 
 h4 {
   margin-bottom: 0.25rem;
-}
-
-p {
-  margin-bottom: 0.5rem;
 }
 
 button {
@@ -92,47 +76,23 @@ button :not(:last-child) {
   margin-right: 0.25rem;
 }
 
-.social {
-  margin-bottom: 2rem;
-}
-.social__icons {
-  display: flex;
-  align-items: center;
-}
-.social__icons :not(:last-child) {
-  margin-right: 1.5rem;
-}
 @media (min-width: 37.5em) {
   section {
     padding: 2rem;
   }
-  section article:not(:last-child) {
-    margin-bottom: 3rem;
+  h2 {
+    margin-bottom: 0;
   }
-  .section-heading {
-    padding: 1.5rem 0;
-    margin-bottom: 2.5rem;
+  h3 {
+    margin-bottom: 0.5rem;
   }
-  .indent {
-    padding: 2rem 0 0 2rem;
+  h4 {
+    margin-bottom: 0.25rem;
   }
 }
 @media (min-width: 62.5em) {
   section {
     padding: 3rem 2rem;
-  }
-  section article:not(:last-child) {
-    margin-bottom: 4rem;
-  }
-  .section-heading {
-    padding: 5rem 0;
-    margin-bottom: 4rem;
-  }
-  .section-heading .text-style-heading-1 {
-    margin-bottom: 0;
-  }
-  .indent {
-    padding: 2rem 0 0 2rem;
   }
   h2 {
     margin-bottom: 1.5rem;
@@ -145,81 +105,69 @@ button :not(:last-child) {
   }
 }
 * {
-  color: rgb(235, 235, 235);
   font-family: Raleway, Sans-serif;
   letter-spacing: 0;
+  line-height: 1;
+  border-color: inherit;
+}
+
+body {
+  color: rgb(235, 235, 235);
 }
 
 h1, h2, h3, h4,
-div, span, p,
-ol, ul, li strong,
-small, i {
-  font-weight: 400;
-  line-height: 1.5;
+p, small, li {
   letter-spacing: 0.15em;
+}
+
+p, small, li {
+  font-weight: 400;
 }
 
 h1, h2, h3, h4 {
   line-height: 1.1;
 }
 
-a, a:visited, a > span {
-  color: rgb(235, 235, 235);
-  font-weight: 700;
+div, p, small, span, strong, u, i, a, a:visited {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
-button {
-  color: rgb(255, 100, 165);
-  text-transform: uppercase;
-  font-weight: 300;
+div, span, strong, u, i, a {
+  letter-spacing: inherit;
 }
-button .material-symbols-outlined {
-  font-weight: 100;
-  font-size: 2em;
+
+span, u {
+  font-weight: inherit;
+}
+
+strong {
+  font-size: 1.075em;
+  font-weight: 700;
 }
 
 p {
   white-space: pre-line;
-  line-height: 2;
+  line-height: 1.75;
+}
+p a, p a:visited {
+  color: rgb(255, 100, 165);
 }
 
-span {
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-  letter-spacing: inherit;
-}
-
-.text-style-title {
-  color: rgb(143, 143, 255);
+.font-title {
   text-transform: uppercase;
   font-family: Monoton, Sans-serif;
-  font-weight: 500;
-  line-height: 1.25;
-  border-bottom: 0.025em solid rgb(143, 143, 255);
 }
 
-.text-style-heading-1 {
-  position: relative;
-  left: 0.375em;
-  color: rgb(97, 81, 51);
-  text-align: center;
+.font-alternative {
   text-transform: uppercase;
   font-family: Poiret One, Sans-serif;
-  font-size: inherit;
-  font-weight: 500;
-  line-height: 1.5;
 }
 
 .symbol {
-  position: relative;
   font-family: serif;
-}
-.symbol__before, .symbol__after {
-  bottom: 0.25rem;
-  color: rgb(97, 81, 51);
 }
 .symbol__before::before {
   content: "⤜";
@@ -230,23 +178,52 @@ span {
   font-size: 1.1em;
 }
 
-.text-style-heading-2 {
+.font-weight-light {
+  font-weight: 100;
+}
+
+.font-weight-regular {
+  font-weight: 400;
+}
+
+.font-weight-bold {
   font-weight: 700;
 }
 
-.text-style-subtle {
+.color-primary-1 {
+  color: rgb(235, 235, 235);
+}
+
+.color-primary-2 {
   color: rgb(195, 195, 195);
-  line-height: 1.1;
 }
 
-.text-style-muted {
+.color-primary-3 {
   color: rgb(180, 180, 180);
-  line-height: 1.75;
 }
 
-.text-style-button {
+.color-accent-1 {
+  color: rgb(143, 143, 255);
+}
+
+.color-accent-2 {
   color: rgb(255, 100, 165);
-  text-transform: uppercase;
+}
+
+.color-accent-3 {
+  color: rgb(97, 81, 51);
+}
+
+.color-secondary-1 {
+  color: rgb(18, 18, 18);
+}
+
+.color-secondary-2 {
+  color: rgb(23, 23, 23);
+}
+
+.color-secondary-3 {
+  color: rgb(36, 36, 36);
 }
 
 .letter-spacing-l-l {
@@ -273,16 +250,16 @@ span {
   letter-spacing: 0.1em;
 }
 
-.letter-spacing-s-l {
-  letter-spacing: 1em;
+.line-height-2 {
+  line-height: 2;
 }
 
-.letter-spacing-s {
-  letter-spacing: 1em;
+.line-height-1_5 {
+  line-height: 1.5;
 }
 
-.letter-spacing-s-s {
-  letter-spacing: 1em;
+.line-height-1 {
+  line-height: 1;
 }
 
 .font-size-l-l {
@@ -432,9 +409,12 @@ span {
   background-size: cover;
 }
 .hero__header {
+  position: relative;
+  bottom: 3%;
   z-index: 3;
   padding: 0.5rem 0;
   margin-top: auto;
+  border-bottom: 0.025em solid rgb(143, 143, 255);
 }
 .hero__overlay-a, .hero__overlay-b {
   position: absolute;
@@ -449,7 +429,7 @@ span {
 }
 .hero__overlay-b {
   z-index: 0;
-  height: 100%;
+  height: 50%;
   background-image: linear-gradient(transparent, #22000e);
 }
 .hero__img_portrait {
@@ -461,10 +441,10 @@ span {
   height: 12rem;
   margin: 0 1rem 1rem 0;
   border-radius: 50%;
-  background-image: url(../images/PortraitSassy.jpg);
+  background-image: url(../images/PortraitFront.jpeg);
   background-repeat: no-repeat;
   background-position: 50% 35%;
-  background-size: 110%;
+  background-size: 105%;
 }
 @media (min-width: 37.5em) {
   .hero {
@@ -485,11 +465,9 @@ span {
   }
   .hero__overlay-a {
     height: 40%;
-    background-image: linear-gradient(transparent, transparent, rgb(18, 18, 18));
   }
   .hero__overlay-b {
     height: 65%;
-    background-image: linear-gradient(transparent, #22000e);
   }
 }
 @media (min-width: 62.5em) {
@@ -497,6 +475,9 @@ span {
     height: 23rem;
     padding: 0 2rem 0;
     margin-bottom: 3rem;
+  }
+  .hero__header {
+    text-align: right;
   }
   .hero__img_portrait {
     height: 20rem;
@@ -509,26 +490,89 @@ span {
   }
   .hero__overlay-a {
     height: 35%;
-    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6), rgb(18, 18, 18));
   }
   .hero__overlay-b {
     height: 80%;
-    background-image: linear-gradient(transparent, #22000e);
   }
 }
 
-.experience__horizontal {
+.content section article:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.content section article p:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.content .indent {
+  padding: 1rem 0 0 1rem;
+  border-left: 1px solid rgb(36, 36, 36);
+}
+.content .header {
+  margin-bottom: 0.5rem;
+}
+.content .header > * {
+  display: block;
+}
+.content .section-header {
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+.content .section-header > h2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(97, 81, 51, 0.4);
+}
+.content .section-header > h2 .text {
+  position: relative;
+  left: 0.35em;
+  margin-bottom: 0;
+}
+.content .section-header > h2 .symbol {
+  position: relative;
+  bottom: 0.25rem;
+}
+.content .horizontal {
   display: flex;
   flex-direction: column;
 }
-.experience__horizontal > :not(:last-child) {
+.content .horizontal > :not(:last-child) {
   margin: 0 0 1rem 0;
 }
 @media (min-width: 37.5em) {
-  .experience__horizontal {
+  .content section article:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .content .section-header {
+    padding: 1.5rem 0;
+    margin-bottom: 2.5rem;
+  }
+  .content .indent {
+    padding: 2rem 0 0 2rem;
+  }
+  .content .horizontal {
+    flex-direction: column;
+  }
+  .content .horizontal > :not(:last-child) {
+    margin: 0 0 2rem 0;
+  }
+}
+@media (min-width: 62.5em) {
+  .content section article:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+  .content .section-header {
+    padding: 5rem 0;
+    margin-bottom: 4rem;
+  }
+  .content .indent {
+    padding: 1rem 0 0 2rem;
+  }
+  .content .horizontal {
     flex-direction: row;
   }
-  .experience__horizontal > :not(:last-child) {
+  .content .horizontal > :not(:last-child) {
     margin: 0 2rem 0 0;
   }
 }/*# sourceMappingURL=style.css.map */
