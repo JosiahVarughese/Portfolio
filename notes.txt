@@ -3,7 +3,8 @@ TODO
  Make your naming conventions more consistent
 
 • Finish a basic About Me section
- What does an about me section need to have in it?
+    Q: What does an about me section need to have in it?
+    A: 
 
 • Add horizontal scrolling for .horizontal
 
@@ -11,9 +12,17 @@ TODO
 
 • Create a resume(s) catered specifically to the portfolio & add a resume/pdf link?
 
-• What other functions do we want to add to the page? Does it need anything else right now? Maybe it's better to switch your focus to personal projects.
- What do we want to do with the site in the long term?
+• What other functions do we want to add to the page? Does it need anything else right now?
+ Maybe it's better to switch your focus to personal projects
+    Q: What do we want to do with the site in the long term?
+    A: We should definitely move to building out some projects
+    ideas:
+    - Shape language human generator
+    - Destructible terrain project
+    - Social media
+    - 
 
+• 
 
 KNOWN ISSUES
 • Image scaling, pixel perfect images, image breakpoints.
