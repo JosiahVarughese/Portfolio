@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-color: rgb(18, 18, 18);
+  background-color: rgb(255, 255, 255);
 }
 
 .wrapper {
@@ -26,14 +26,14 @@ body {
 }
 
 main section:nth-of-type(odd) {
-  background-color: rgb(18, 18, 18);
+  background-color: rgb(255, 255, 255);
 }
 main section:nth-of-type(even) {
-  background-color: rgb(23, 23, 23);
+  background-color: rgb(255, 251, 250);
 }
 
 footer {
-  background-color: rgb(36, 36, 36);
+  background-color: rgb(255, 227, 178);
 }
 footer .header {
   margin-bottom: 2rem;
@@ -112,7 +112,7 @@ button :not(:last-child) {
 }
 
 body {
-  color: rgb(235, 235, 235);
+  color: rgb(0, 0, 0);
 }
 
 h1, h2, h3, h4,
@@ -195,19 +195,19 @@ button {
 }
 
 .color-primary-1 {
-  color: rgb(235, 235, 235);
+  color: rgb(0, 0, 0);
 }
 
 .color-primary-2 {
-  color: rgb(195, 195, 195);
+  color: rgb(255, 191, 0);
 }
 
 .color-primary-3 {
-  color: rgb(180, 180, 180);
+  color: rgb(144, 144, 144);
 }
 
 .color-accent-1 {
-  color: rgb(143, 143, 255);
+  color: rgb(120, 255, 235);
 }
 
 .color-accent-2 {
@@ -215,19 +215,19 @@ button {
 }
 
 .color-accent-3 {
-  color: rgb(97, 81, 51);
+  color: rgb(255, 132, 0);
 }
 
 .color-secondary-1 {
-  color: rgb(18, 18, 18);
+  color: rgb(255, 255, 255);
 }
 
 .color-secondary-2 {
-  color: rgb(23, 23, 23);
+  color: rgb(255, 251, 250);
 }
 
 .color-secondary-3 {
-  color: rgb(36, 36, 36);
+  color: rgb(255, 227, 178);
 }
 
 .letter-spacing-l-l {
@@ -403,14 +403,23 @@ button {
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   width: 100%;
   height: 65vw;
-  padding: 0 1rem 0;
+  padding: 1rem 1rem 0;
   margin-bottom: 0.5rem;
   background-image: url(../images/Downtown.jpg);
   background-position: 50% 40%;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.hero #theme-toggle-button {
+  position: absolute;
+  z-index: 2;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  background-color: rgb(255, 255, 255);
 }
 .hero__header {
   position: relative;
@@ -418,7 +427,7 @@ button {
   z-index: 3;
   padding: 0.5rem 0;
   margin-top: auto;
-  border-bottom: 0.025em solid rgb(143, 143, 255);
+  border-bottom: 0.025em solid rgb(120, 255, 235);
 }
 .hero__overlay-a, .hero__overlay-b {
   position: absolute;
@@ -428,22 +437,21 @@ button {
 }
 .hero__overlay-a {
   z-index: 2;
-  height: 40%;
-  background-image: linear-gradient(transparent, transparent, rgb(18, 18, 18));
+  height: 35%;
+  background-image: linear-gradient(transparent, rgb(18, 18, 18));
 }
 .hero__overlay-b {
-  z-index: 0;
-  height: 50%;
-  background-image: linear-gradient(transparent, #22000e);
+  height: 75%;
+  background-image: linear-gradient(transparent, rgb(33, 13, 6));
 }
 .hero__img_portrait {
   position: absolute;
   z-index: 1;
-  top: 1rem;
-  right: 0;
+  top: 15%;
+  right: 40%;
+  translate: 50%;
   width: 12rem;
   height: 12rem;
-  margin: 0 1rem 1rem 0;
   border-radius: 50%;
   background-image: url(../images/PortraitFront.jpeg);
   background-repeat: no-repeat;
@@ -455,6 +463,10 @@ button {
     height: 22.4rem;
     padding: 0 2rem 0;
     margin-bottom: 1rem;
+  }
+  .hero #theme-toggle-button {
+    top: 2rem;
+    right: 2rem;
   }
   .hero__header > br {
     display: none;
@@ -468,10 +480,10 @@ button {
     translate: -50%;
   }
   .hero__overlay-a {
-    height: 40%;
+    height: 25%;
   }
   .hero__overlay-b {
-    height: 65%;
+    height: 70%;
   }
 }
 @media (min-width: 62.5em) {
@@ -479,6 +491,10 @@ button {
     height: 23rem;
     padding: 0 2rem 0;
     margin-bottom: 3rem;
+  }
+  .hero #theme-toggle-button {
+    top: 2rem;
+    right: 2rem;
   }
   .hero__header {
     text-align: right;
@@ -493,10 +509,10 @@ button {
     translate: 0;
   }
   .hero__overlay-a {
-    height: 35%;
+    height: 30%;
   }
   .hero__overlay-b {
-    height: 80%;
+    height: 90%;
   }
 }
 
@@ -508,7 +524,7 @@ button {
 }
 .content .indent {
   padding: 1rem 0 0 1rem;
-  border-left: 1px solid rgb(36, 36, 36);
+  border-left: 1px solid rgb(255, 227, 178);
 }
 .content .header {
   margin-bottom: 0.5rem;
@@ -526,7 +542,7 @@ button {
   align-items: center;
   justify-content: center;
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(97, 81, 51, 0.4);
+  border-bottom: 1px solid rgba(255, 132, 0, 0.4);
 }
 .content .section-header > h2 .text {
   position: relative;
@@ -579,4 +595,4 @@ button {
   .content .horizontal > :not(:last-child) {
     margin: 0 2rem 0 0;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style-light.css.map */
