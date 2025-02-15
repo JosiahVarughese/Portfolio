@@ -62,15 +62,6 @@ h4 {
   margin-bottom: 0.25rem;
 }
 
-#theme-toggle-button {
-  position: absolute;
-  z-index: 1;
-  top: 2rem;
-  right: 2rem;
-  padding: 0.5rem;
-  background-color: rgb(18, 18, 18);
-}
-
 button {
   display: flex;
   align-items: center;
@@ -412,14 +403,23 @@ button {
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   width: 100%;
   height: 65vw;
-  padding: 0 1rem 0;
+  padding: 1rem 1rem 0;
   margin-bottom: 0.5rem;
   background-image: url(../images/Downtown.jpg);
   background-position: 50% 40%;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.hero #theme-toggle-button {
+  position: absolute;
+  z-index: 2;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  background-color: rgb(18, 18, 18);
 }
 .hero__header {
   position: relative;
@@ -447,11 +447,11 @@ button {
 .hero__img_portrait {
   position: absolute;
   z-index: 1;
-  top: 1rem;
-  right: 0;
+  top: 15%;
+  right: 40%;
+  translate: 50%;
   width: 12rem;
   height: 12rem;
-  margin: 0 1rem 1rem 0;
   border-radius: 50%;
   background-image: url(../images/PortraitFront.jpeg);
   background-repeat: no-repeat;
@@ -463,6 +463,10 @@ button {
     height: 22.4rem;
     padding: 0 2rem 0;
     margin-bottom: 1rem;
+  }
+  .hero #theme-toggle-button {
+    top: 2rem;
+    right: 2rem;
   }
   .hero__header > br {
     display: none;
@@ -487,6 +491,10 @@ button {
     height: 23rem;
     padding: 0 2rem 0;
     margin-bottom: 3rem;
+  }
+  .hero #theme-toggle-button {
+    top: 2rem;
+    right: 2rem;
   }
   .hero__header {
     text-align: right;

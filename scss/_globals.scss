@@ -70,18 +70,6 @@ h4 {
     margin-bottom: 0.25rem;
 }
 
-#theme-toggle-button {
-    position: absolute;
-    z-index: 1;
-
-    top: $padding-med;
-    right: $padding-med;
-
-    padding: 0.5rem;
-
-    background-color: $secondary-1;
-}
-
 button {
     display: flex;
     align-items: center;

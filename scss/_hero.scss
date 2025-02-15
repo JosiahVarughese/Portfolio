@@ -2,11 +2,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
     width: 100%;
     height: 65vw;
 
-    padding: 0 $padding-small 0;
+    padding: $padding-small $padding-small 0;
     margin-bottom: 0.5rem;
 
     background-image: url(../images/Downtown.jpg);
@@ -14,6 +15,18 @@
     background-repeat: no-repeat;
     background-size: cover;
     
+    #theme-toggle-button {
+        position: absolute;
+        z-index: 2;
+    
+        top: $padding-small;
+        right: $padding-small;
+    
+        padding: 0.5rem;
+    
+        background-color: $secondary-1;
+    }
+
     &__header {
         position: relative;
         bottom: 3%;
@@ -49,13 +62,12 @@
         position: absolute;
         z-index: 1;
         
-        top: $padding-small;
-        right: 0;
+        top: 15%;
+        right: 40%;
+        translate: 50%;
 
         width: $pfp-size-mobile;
         height: $pfp-size-mobile;
-
-        margin: 0 $padding-small $padding-small 0;
 
         border-radius: 50%;
         
@@ -67,6 +79,11 @@
     
     //TABLET
     @media (min-width: $breakpoint-md) {
+        #theme-toggle-button {
+            top: $padding-med;
+            right: $padding-med;
+        }
+
         height: calc($pfp-size-tablet * 1.4);
 
         padding: 0 $padding-med 0;
@@ -97,6 +114,11 @@
 
     //DESKTOP
     @media (min-width: $breakpoint-lg) {
+        #theme-toggle-button {
+            top: $padding-med;
+            right: $padding-med;
+        }
+
         height: calc($pfp-size-desktop + $padding-large);
 
         padding: 0 $padding-med 0;
