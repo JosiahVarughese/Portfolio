@@ -62,6 +62,15 @@ h4 {
   margin-bottom: 0.25rem;
 }
 
+#theme-toggle-button {
+  position: absolute;
+  z-index: 1;
+  top: 2rem;
+  right: 2rem;
+  padding: 0.5rem;
+  background-color: rgb(18, 18, 18);
+}
+
 button {
   display: flex;
   align-items: center;
@@ -428,13 +437,12 @@ button {
 }
 .hero__overlay-a {
   z-index: 2;
-  height: 40%;
-  background-image: linear-gradient(transparent, transparent, rgb(18, 18, 18));
+  height: 35%;
+  background-image: linear-gradient(transparent, rgb(18, 18, 18));
 }
 .hero__overlay-b {
-  z-index: 0;
-  height: 50%;
-  background-image: linear-gradient(transparent, #22000e);
+  height: 75%;
+  background-image: linear-gradient(transparent, rgb(33, 13, 6));
 }
 .hero__img_portrait {
   position: absolute;
@@ -468,10 +476,10 @@ button {
     translate: -50%;
   }
   .hero__overlay-a {
-    height: 40%;
+    height: 25%;
   }
   .hero__overlay-b {
-    height: 65%;
+    height: 70%;
   }
 }
 @media (min-width: 62.5em) {
@@ -493,10 +501,10 @@ button {
     translate: 0;
   }
   .hero__overlay-a {
-    height: 35%;
+    height: 30%;
   }
   .hero__overlay-b {
-    height: 80%;
+    height: 90%;
   }
 }
 
@@ -579,4 +587,4 @@ button {
   .content .horizontal > :not(:last-child) {
     margin: 0 2rem 0 0;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style-dark.css.map */

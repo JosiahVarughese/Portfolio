@@ -6,9 +6,7 @@ TODO
     Q: What does an about me section need to have in it?
     A: 
 
-• Add horizontal scrolling for .horizontal
-
-• Add a dark/light/system switch?
+• Add horizontal scrolling for .horizontal?
 
 • Create a resume(s) catered specifically to the portfolio & add a resume/pdf link?
 
