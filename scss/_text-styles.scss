@@ -57,7 +57,6 @@ p {
 
 button {
     color: $accent-2;
-    // text-transform: uppercase;
 }
 
 .font-title {
@@ -74,6 +73,7 @@ button {
 
 .symbol {
     font-family: serif;
+    font-weight: 100;
 
     &__before::before {
         content: '\291C';
@@ -81,7 +81,7 @@ button {
     }
     &__after::after {
         content: '\2192';
-        font-size: 1.1em;
+        font-size: 1.15em;
     }
 }
 
@@ -90,6 +90,13 @@ button {
 .font-weight-bold { font-weight: 700; }
 
 //MOBILE
+.color-primary-1, .color-primary-2, .color-primary-3,
+.color-secondary-1, .color-secondary-2, .color-secondary-3,
+.color-accent-1, .color-accent-2, .color-accent-3 {
+    transition: color $ease-time ease-in;
+}
+
+
 .color-primary-1  { color: $primary-1; }
 .color-primary-2 { color: $primary-2; }
 .color-primary-3  { color: $primary-3; }
@@ -154,7 +161,7 @@ button {
 
     .font-size-dynamic-title { font-size: 9.25vw; }
     .font-size-dynamic-1 { font-size: 4vw; }
-    .font-size-dynamic-2 { font-size: 2.75vw; }
+    .font-size-dynamic-2 { font-size: 4vw; }
 }
 
 //DESKTOP
@@ -177,5 +184,5 @@ button {
 
     .font-size-dynamic-title { font-size: 7.9vw; }
     .font-size-dynamic-1 { font-size: 2.75vw; }
-    .font-size-dynamic-2 { font-size: 2.25vw; }
+    .font-size-dynamic-2 { font-size: 2.35vw; }
 }

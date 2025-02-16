@@ -4,22 +4,13 @@ const pathToStyles = "css/";
 const stylesheetElem = document.getElementById("stylesheet");
 const themeToggleElem = document.getElementById("theme-toggle-button");
 const themeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-const themePreferenceIconDark = "dark_mode";
-const themePreferenceIconLight = "light_mode";
-const themePreferenceIconSystem = "routine";
 
 const changeStyleSheet = stylesheetName => stylesheetElem.setAttribute("href", `${pathToStyles}${stylesheetName}.css`);
 const handleChangeStylesheet = event => changeStyleSheet(event.matches ? "style-dark" : "style-light");
 
-function getThemeButtonIcon (newThemePreference) {
-    switch(newThemePreference) {
-        case "dark":
-            return themePreferenceIconDark;
-        case "light":
-            return themePreferenceIconLight;
-        default:
-            return themePreferenceIconSystem;
-    }
+function setThemeButtonStyle (newThemePreference) {
+    themeToggleElem.classList.remove("toggle-dark", "toggle-light", "toggle-system");
+    themeToggleElem.classList.add("toggle-" + newThemePreference);
 }
 
 function changeThemePreference(newThemePreference) {
@@ -33,7 +24,7 @@ function changeThemePreference(newThemePreference) {
         themeMediaQuery.addEventListener("change", handleChangeStylesheet);
     }
     
-    themeToggleElem.innerHTML = getThemeButtonIcon(newThemePreference);
+    setThemeButtonStyle(newThemePreference);
     themePreference = newThemePreference;
 }
 

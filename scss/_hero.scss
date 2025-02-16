@@ -8,24 +8,11 @@
     height: 65vw;
 
     padding: $padding-small $padding-small 0;
-    margin-bottom: 0.5rem;
 
     background-image: url(../images/Downtown.jpg);
     background-position: 50% 40%;
     background-repeat: no-repeat;
     background-size: cover;
-    
-    #theme-toggle-button {
-        position: absolute;
-        z-index: 2;
-    
-        top: $padding-small;
-        right: $padding-small;
-    
-        padding: 0.5rem;
-    
-        background-color: $secondary-1;
-    }
 
     &__header {
         position: relative;
@@ -79,15 +66,10 @@
     
     //TABLET
     @media (min-width: $breakpoint-md) {
-        #theme-toggle-button {
-            top: $padding-med;
-            right: $padding-med;
-        }
 
         height: calc($pfp-size-tablet * 1.4);
 
         padding: 0 $padding-med 0;
-        margin-bottom: 1rem;
 
         &__header {
             > br { display: none; }
@@ -114,15 +96,10 @@
 
     //DESKTOP
     @media (min-width: $breakpoint-lg) {
-        #theme-toggle-button {
-            top: $padding-med;
-            right: $padding-med;
-        }
 
         height: calc($pfp-size-desktop + $padding-large);
 
         padding: 0 $padding-med 0;
-        margin-bottom: 3rem;
 
         &__header {
             text-align: right;

@@ -25,13 +25,6 @@ body {
   width: 100vw;
 }
 
-main section:nth-of-type(odd) {
-  background-color: rgb(18, 18, 18);
-}
-main section:nth-of-type(even) {
-  background-color: rgb(23, 23, 23);
-}
-
 footer {
   background-color: rgb(36, 36, 36);
 }
@@ -76,6 +69,46 @@ button :not(:last-child) {
   margin-right: 0.25rem;
 }
 
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  height: 0;
+}
+
+#theme-toggle-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-weight: 500;
+  background-color: rgb(18, 18, 18);
+  width: -moz-min-content;
+  width: min-content;
+  padding: 0.75rem;
+  border-width: 2px;
+}
+#theme-toggle-button.toggle-dark {
+  color: rgb(143, 143, 255);
+  border-color: rgb(143, 143, 255);
+}
+#theme-toggle-button.toggle-dark::after {
+  content: "dark_mode";
+}
+#theme-toggle-button.toggle-light {
+  color: rgb(97, 81, 51);
+  border-color: rgb(97, 81, 51);
+}
+#theme-toggle-button.toggle-light::after {
+  content: "light_mode";
+}
+#theme-toggle-button.toggle-system {
+  color: rgb(255, 100, 165);
+  border-color: rgb(255, 100, 165);
+}
+#theme-toggle-button.toggle-system::after {
+  content: "routine";
+}
+
 @media (min-width: 37.5em) {
   section {
     padding: 2rem;
@@ -88,6 +121,10 @@ button :not(:last-child) {
   }
   h4 {
     margin-bottom: 0.25rem;
+  }
+  #theme-toggle-button {
+    top: 2rem;
+    right: 2rem;
   }
 }
 @media (min-width: 62.5em) {
@@ -102,6 +139,10 @@ button :not(:last-child) {
   }
   h4 {
     margin-bottom: 0.5rem;
+  }
+  #theme-toggle-button {
+    top: 2rem;
+    right: 2rem;
   }
 }
 * {
@@ -172,6 +213,7 @@ button {
 
 .symbol {
   font-family: serif;
+  font-weight: 100;
 }
 .symbol__before::before {
   content: "⤜";
@@ -179,7 +221,7 @@ button {
 }
 .symbol__after::after {
   content: "→";
-  font-size: 1.1em;
+  font-size: 1.15em;
 }
 
 .font-weight-light {
@@ -192,6 +234,12 @@ button {
 
 .font-weight-bold {
   font-weight: 700;
+}
+
+.color-primary-1, .color-primary-2, .color-primary-3,
+.color-secondary-1, .color-secondary-2, .color-secondary-3,
+.color-accent-1, .color-accent-2, .color-accent-3 {
+  transition: color 300ms ease-in;
 }
 
 .color-primary-1 {
@@ -355,7 +403,7 @@ button {
     font-size: 4vw;
   }
   .font-size-dynamic-2 {
-    font-size: 2.75vw;
+    font-size: 4vw;
   }
 }
 @media (min-width: 62.5em) {
@@ -396,7 +444,7 @@ button {
     font-size: 2.75vw;
   }
   .font-size-dynamic-2 {
-    font-size: 2.25vw;
+    font-size: 2.35vw;
   }
 }
 .hero {
@@ -407,19 +455,10 @@ button {
   width: 100%;
   height: 65vw;
   padding: 1rem 1rem 0;
-  margin-bottom: 0.5rem;
   background-image: url(../images/Downtown.jpg);
   background-position: 50% 40%;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.hero #theme-toggle-button {
-  position: absolute;
-  z-index: 2;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem;
-  background-color: rgb(18, 18, 18);
 }
 .hero__header {
   position: relative;
@@ -462,11 +501,6 @@ button {
   .hero {
     height: 22.4rem;
     padding: 0 2rem 0;
-    margin-bottom: 1rem;
-  }
-  .hero #theme-toggle-button {
-    top: 2rem;
-    right: 2rem;
   }
   .hero__header > br {
     display: none;
@@ -490,11 +524,6 @@ button {
   .hero {
     height: 23rem;
     padding: 0 2rem 0;
-    margin-bottom: 3rem;
-  }
-  .hero #theme-toggle-button {
-    top: 2rem;
-    right: 2rem;
   }
   .hero__header {
     text-align: right;
@@ -516,83 +545,99 @@ button {
   }
 }
 
-.content section article:not(:last-child) {
+main section {
+  transition: background-color 300ms ease-in;
+}
+main section:nth-of-type(odd) {
+  background-color: rgb(18, 18, 18);
+}
+main section:nth-of-type(even) {
+  background-color: rgb(23, 23, 23);
+}
+main section article {
+  transition: color 300ms ease-in;
+}
+main section article:not(:last-child) {
   margin-bottom: 2rem;
 }
-.content section article p:not(:last-child) {
+main section article p:not(:last-child) {
   margin-bottom: 0.75rem;
 }
-.content .indent {
+main .indent {
   padding: 1rem 0 0 1rem;
   border-left: 1px solid rgb(36, 36, 36);
+  transition: border-color 300ms ease-in;
 }
-.content .header {
+main .header {
   margin-bottom: 0.5rem;
 }
-.content .header > * {
+main .header > * {
   display: block;
 }
-.content .section-header {
+main .section-header {
   text-align: center;
   padding: 1rem 0;
   margin-bottom: 2rem;
 }
-.content .section-header > h2 {
+main .section-header > h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 1rem 0;
   border-bottom: 1px solid rgba(97, 81, 51, 0.4);
 }
-.content .section-header > h2 .text {
+main .section-header > h2 .text {
   position: relative;
   left: 0.35em;
   margin-bottom: 0;
 }
-.content .section-header > h2 .symbol {
+main .section-header > h2 .symbol {
   position: relative;
   bottom: 0.25rem;
 }
-.content .horizontal {
+main .horizontal {
   display: flex;
   flex-direction: column;
 }
-.content .horizontal > :not(:last-child) {
+main .horizontal > :not(:last-child) {
   margin: 0 0 1rem 0;
 }
 @media (min-width: 37.5em) {
-  .content section article:not(:last-child) {
+  main section article:not(:last-child) {
     margin-bottom: 3rem;
   }
-  .content .section-header {
+  main .section-header {
     padding: 1.5rem 0;
     margin-bottom: 2.5rem;
   }
-  .content .indent {
+  main .indent {
     padding: 2rem 0 0 2rem;
   }
-  .content .horizontal {
+  main .horizontal {
     flex-direction: column;
   }
-  .content .horizontal > :not(:last-child) {
+  main .horizontal > :not(:last-child) {
     margin: 0 0 2rem 0;
   }
 }
 @media (min-width: 62.5em) {
-  .content section article:not(:last-child) {
+  main section article:not(:last-child) {
     margin-bottom: 4rem;
   }
-  .content .section-header {
+  main .section-header {
     padding: 5rem 0;
     margin-bottom: 4rem;
   }
-  .content .indent {
+  main .section-header .text br {
+    display: none;
+  }
+  main .indent {
     padding: 1rem 0 0 2rem;
   }
-  .content .horizontal {
+  main .horizontal {
     flex-direction: row;
   }
-  .content .horizontal > :not(:last-child) {
+  main .horizontal > :not(:last-child) {
     margin: 0 2rem 0 0;
   }
 }/*# sourceMappingURL=style-dark.css.map */
