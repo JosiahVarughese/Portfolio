@@ -6,21 +6,25 @@
       
         <title>Josiah Varughese</title>
         <link rel="icon" href="images/Favicon.png">
-        <link id="stylesheet" rel="stylesheet" href="css/style.css" />
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Bungee+Outline&family=Monoton&family=Poiret+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Syncopate:wght@400;700&family=Train+One&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode,light_mode,routine,send" />
-
+        
         <script src="https://kit.fontawesome.com/e1ab631cdb.js" crossorigin="anonymous"></script>
+
+        <link id="stylesheet" rel="stylesheet" href="css/style.css" />
         <script defer src="index.js"></script>
     </head>
     <body>
         <div class="wrapper">
+            <div class="sticky-header">
+                <button id="theme-toggle-button" class="material-symbols-outlined font-size-l-s" onclick="toggleColorTheme()"></button>
+            </div>
+            
             <header>
                 <section class="hero">
-                    <button id="theme-toggle-button" class="material-symbols-outlined" onclick="toggleColorTheme()"></button>
                     <h1 class="hero__header font-title font-weight-light color-accent-1 font-size-dynamic-title letter-spacing-m">Hi,<br> I'm Josiah</h1>
                     <div class="hero__overlay-a"></div>
                     <div class="hero__img_portrait"></div>
@@ -28,7 +32,7 @@
                 </section>
             </header>
             
-            <main class="content">
+            <main>
                 <!-- <section id="about-me">
                     <div class="section-header">
                         <div class="text font-size-dynamic-1">

@@ -1,7 +1,19 @@
-.content {
+main {
 
     //MOBILE
     section {
+        &:nth-of-type(odd) {
+            background-color: $secondary-1;
+        }
+        &:nth-of-type(even) {
+            background-color: $secondary-2;
+        }
+        transition: background-color $ease-time ease-in;
+
+        article {
+            transition: color $ease-time ease-in;
+        }
+
         article {
             &:not(:last-child) {
                 margin-bottom: $padding-med;
@@ -15,6 +27,8 @@
     .indent {
         padding: $padding-small 0 0 $padding-small;
         border-left: 1px solid $secondary-3;
+
+        transition: border-color $ease-time ease-in;
     }
     
     .header {
@@ -102,6 +116,10 @@
         .section-header {
             padding: 5rem 0;
             margin-bottom: 4rem;
+
+            .text {
+                br { display: none; }
+            }
         }
 
         .indent {
